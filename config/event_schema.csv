@@ -1,0 +1,19 @@
+field,type,unit,description
+event_id,string,,Unique event identifier
+process,string,,signal photon_background or DIS_background
+signal_type,string,,vector scalar or background subtype
+mass_GeV,float,GeV,Signal mass hypothesis; background events will be evaluated per mass hypothesis
+coupling,float,,Signal electron coupling used in generation
+event_weight_pb,float,pb,Cross-section contribution of this weighted event
+electron_pt_GeV,float,GeV,Reconstructed outgoing-electron transverse momentum
+electron_eta,float,,Reconstructed outgoing-electron pseudorapidity
+electron_energy_GeV,float,GeV,Reconstructed outgoing-electron energy
+Qe2_GeV2,float,GeV2,Electron momentum transfer squared
+QA2_GeV2,float,GeV2,Nuclear momentum transfer squared
+pair_mass_GeV,float,GeV,Generated electron-boson invariant mass for signal
+pass_Qe2,bool,,Passes the mass-dependent Table I Qe2 threshold
+pass_pt,bool,,Passes the mass-dependent Table I electron-pT threshold
+pass_eta,bool,,Passes the mass-dependent Table I eta window
+pass_energy,bool,,Passes the Table I electron-energy ceiling
+pass_all,bool,,Passes every Table I requirement
+split,string,,Deterministic train validation or test assignment

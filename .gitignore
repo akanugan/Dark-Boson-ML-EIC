@@ -1,0 +1,13 @@
+data/
+models/
+*.root
+__pycache__/
+*.pyc
+.DS_Store
+paper/latex/build/
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
