@@ -57,8 +57,3 @@ plot:
 
 clean:
 	rm -f $(TARGETS)
-
-# Publication manuscript (independent of simulation outputs).
-.PHONY: paper
-paper:
-	./paper/latex/build.sh

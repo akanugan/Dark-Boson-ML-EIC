@@ -1,24 +1,20 @@
-# EIC dark-boson selection study
+# EIC dark-boson simulation and analysis data
 
-Code, numerical results, and manuscript for the comparison of boosted decision trees with optimized rectangular cuts in coherent scalar and vector dark-boson production.
+Reproducibility package for comparing boosted decision trees with optimized rectangular cuts in coherent scalar and vector dark-boson production. The manuscript is not distributed in this repository.
 
 ## Contents
 
-- `src/`, `include/`, `scripts/`, `config/`: simulation and analysis code and configuration.
-- `results/`, `fair_study/`, `plots/`: numerical summaries, analysis records, and figures.
-- `paper/latex/main.tex` and `main.pdf`: current manuscript draft (contains author-completion fields).
-- `docs/`: methods, provenance, and historical analysis notes. Earlier notes may describe superseded exploratory analyses; consult the manuscript and final-result manifests for the current presentation.
+- `src/`, `include/`, `scripts/`, `config/`: simulation, analysis, and plotting code and configurations.
+- `results/`, `fair_study/`, `plots/`: numerical outputs, analysis records, and scientific figures.
+- `docs/`: methods, background assumptions, protocols, and provenance. Historical notes may describe superseded exploratory analyses; consult the final-result manifests.
+- [Independent-run numerical tables](results/figure8_independent_runs/): exact values and uncertainty intervals.
 
-## Build the manuscript
+## Simulation data and trained models
 
-Install a TeX distribution with pdfLaTeX and latexmk, then run `make paper`. Output: `paper/latex/main.pdf`.
-
-## Simulation data
-
-The `data-v1` GitHub release contains the `data/`, `models/`, and `fair_study/` directories as compressed archives. These include ROOT events, event-level CSV files, trained models, and complete run records, including historical development runs. They preserve the existing project directory structure. See `DATA_DOWNLOAD.md` for extraction and integrity checks.
+The [data-v1 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/data-v1) contains `data/`, `models/`, and `fair_study/` as compressed archives, including ROOT events, event-level CSVs, trained models, bootstrap outputs, and historical run records. See [download instructions](DATA_DOWNLOAD.md) for extraction and integrity checks.
 
 ## Reproducing the analysis
 
-The simulation requires ROOT with TFoam and TMVA and a C++17 compiler. Python package requirements are in `requirements.txt`; inspect the analysis scripts for additional task-specific tools. See [project workflows](docs/PROJECT_WORKFLOWS.md) and the protocol documents under `docs/`. This publication snapshot was packaged from the existing project; the complete simulation was not rerun during upload.
+The simulation requires ROOT with TFoam and TMVA and a C++17 compiler. Python dependencies are listed in `requirements.txt`; individual scripts may need additional tools. See [project workflows](docs/PROJECT_WORKFLOWS.md) and the protocol documents under `docs/`.
 
-The background model and detector assumptions are described in the manuscript. External papers, private progress documents, and superseded manuscript drafts are not redistributed. Public ancillary reference distributions used by historical comparison scripts must be obtained from the cited original work.
+This package was assembled from existing outputs; the complete simulation was not rerun during upload. External papers and private documents are excluded. Public ancillary reference distributions used by historical comparison scripts must be obtained from the cited original work.

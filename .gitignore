@@ -11,3 +11,7 @@ paper/latex/build/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Manuscripts remain local and must not be published here.
+/paper/
+/scripts/build_manuscript.py
