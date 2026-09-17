@@ -1,0 +1,110 @@
+{
+  "comparison": "Exact RGB pixels; PDFs rasterized at 160 dpi with pdftoppm",
+  "figure_1": "Rendered diagram only; no editable drawing source available",
+  "figures": [
+    {
+      "figure": 2,
+      "identical_pixels": true,
+      "reference_size": [
+        2520,
+        1728
+      ],
+      "generated_size": [
+        2520,
+        1728
+      ],
+      "reference_rgb_sha256": "626cc3ca3eaea22c6a96b897752f21f922a5fff7971426007865d4c7bbe2394d",
+      "generated_rgb_sha256": "626cc3ca3eaea22c6a96b897752f21f922a5fff7971426007865d4c7bbe2394d"
+    },
+    {
+      "figure": 3,
+      "identical_pixels": true,
+      "reference_size": [
+        1496,
+        622
+      ],
+      "generated_size": [
+        1496,
+        622
+      ],
+      "reference_rgb_sha256": "9c423c964dd25cf94ef59b4b22e38ae477f1d554d7be81d3e11bd524779d30e4",
+      "generated_rgb_sha256": "9c423c964dd25cf94ef59b4b22e38ae477f1d554d7be81d3e11bd524779d30e4"
+    },
+    {
+      "figure": 4,
+      "identical_pixels": true,
+      "reference_size": [
+        1796,
+        1002
+      ],
+      "generated_size": [
+        1796,
+        1002
+      ],
+      "reference_rgb_sha256": "c728897796e009677a6916c8496975209ae97ab2cb35258dbd8ebdcbe9563529",
+      "generated_rgb_sha256": "c728897796e009677a6916c8496975209ae97ab2cb35258dbd8ebdcbe9563529"
+    },
+    {
+      "figure": 5,
+      "identical_pixels": true,
+      "reference_size": [
+        1184,
+        504
+      ],
+      "generated_size": [
+        1184,
+        504
+      ],
+      "reference_rgb_sha256": "e2a9266e0d88ee99a71e8c3f6c7780dde74c5c86dea342c7d7a3598d46d62721",
+      "generated_rgb_sha256": "e2a9266e0d88ee99a71e8c3f6c7780dde74c5c86dea342c7d7a3598d46d62721"
+    },
+    {
+      "figure": 6,
+      "identical_pixels": true,
+      "reference_size": [
+        1496,
+        622
+      ],
+      "generated_size": [
+        1496,
+        622
+      ],
+      "reference_rgb_sha256": "5c5842aa68f50b0b377633ba4752ed084fb7be12862e686b384301462e4a8b50",
+      "generated_rgb_sha256": "5c5842aa68f50b0b377633ba4752ed084fb7be12862e686b384301462e4a8b50"
+    },
+    {
+      "figure": 7,
+      "identical_pixels": true,
+      "reference_size": [
+        1096,
+        692
+      ],
+      "generated_size": [
+        1096,
+        692
+      ],
+      "reference_rgb_sha256": "885a6a67bf40f07fd0e97afa8ed079f382f730cfac7b218b412fa8fa2bf56b4c",
+      "generated_rgb_sha256": "885a6a67bf40f07fd0e97afa8ed079f382f730cfac7b218b412fa8fa2bf56b4c"
+    },
+    {
+      "figure": 8,
+      "identical_pixels": true,
+      "reference_size": [
+        1184,
+        480
+      ],
+      "generated_size": [
+        1184,
+        480
+      ],
+      "reference_rgb_sha256": "04b3c10c99bf850b8583706d2da88124e21e173ead8c635c9a8fe40830a6c9d0",
+      "generated_rgb_sha256": "04b3c10c99bf850b8583706d2da88124e21e173ead8c635c9a8fe40830a6c9d0"
+    }
+  ],
+  "environment": {
+    "ROOT": "6.36.04",
+    "Matplotlib": "3.11.2",
+    "Pillow": "12.3.0",
+    "Poppler": "26.07.0"
+  }
+}

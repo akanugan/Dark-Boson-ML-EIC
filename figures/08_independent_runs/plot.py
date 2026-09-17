@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 OUT=Path(__file__).resolve().parent
 def rows(p):
  with open(p) as f:return list(csv.DictReader(f))
+plt.rcParams.update({'font.size':9,'axes.titlesize':10,'axes.labelsize':9,'legend.fontsize':8,'pdf.fonttype':42})
 fig,axs=plt.subplots(1,2,figsize=(7.4,3.0),layout='constrained',gridspec_kw={'width_ratios':[1.15,1]})
 for ax,fp,order,title,color in [
  (axs[0],'seed_robustness/run_20260814T063518Z', [('vector',1.),('vector',10.),('scalar',1.),('scalar',6.31)],'(a) Electron inputs','#222222'),
