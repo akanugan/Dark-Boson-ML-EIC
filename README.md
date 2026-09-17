@@ -20,3 +20,5 @@ The simulation requires ROOT with TFoam and TMVA and a C++17 compiler. Python de
 This package was assembled from existing outputs; the complete simulation was not rerun during upload. External papers and private documents are excluded. Public ancillary reference distributions used by historical comparison scripts must be obtained from the cited original work.
 
 For the Figure 3 macro, data paths, and generator files, see the [code guide](src/README.md).
+
+Browse the [per-figure macros and data](figures/README.md).
