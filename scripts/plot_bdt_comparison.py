@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create publication figures for the frozen fair ML comparison."""
+"""Plot BDT-versus-cuts mass scans and independent-run results."""
 
 from __future__ import annotations
 
@@ -144,7 +144,7 @@ def plot_seed_study() -> None:
 
     image = Image.new("RGB", (2200, 1040), WHITE)
     draw = ImageDraw.Draw(image)
-    centered(draw, (1100, 55), "Ten independent generation-and-training replicas", F_TITLE)
+    centered(draw, (1100, 55), "Ten independent event generation and training runs", F_TITLE)
     centered(draw, (1100, 105), "Hierarchical medians and 95% intervals; all lie inside the preregistered +/-1% equivalence margin", F_NOTE, MUTED)
     left, right, top, bottom = 520, 2060, 180, 850
     x_min, x_max = -0.22, 0.22
@@ -184,8 +184,8 @@ def plot_t_seed_study() -> None:
 
     image = Image.new("RGB", (2200, 940), WHITE)
     draw = ImageDraw.Draw(image)
-    centered(draw, (1100, 55), "Observables + exact t: ten independent replicas", F_TITLE)
-    centered(draw, (1100, 105), "Both methods use identical inputs; hierarchical medians and 95% intervals", F_NOTE, MUTED)
+    centered(draw, (1100, 55), "Observables + exact t: ten independent runs", F_TITLE)
+    centered(draw, (1100, 105), "Both methods use identical inputs; median estimates and 95% intervals", F_NOTE, MUTED)
     left, right, top, bottom = 520, 2060, 180, 735
     x_min, x_max = 0.75, 1.65
     map_x = lambda value: left + (value - x_min) / (x_max - x_min) * (right - left)

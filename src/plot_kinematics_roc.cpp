@@ -675,7 +675,7 @@ void make_roc_figure(const fs::path& root, const fs::path& out) {
 int main(int argc, char** argv) {
   try {
     if (argc != 3) {
-      throw std::runtime_error("usage: make_revision_figures PROJECT_ROOT OUTPUT_DIR");
+      throw std::runtime_error("usage: plot_kinematics_roc PROJECT_ROOT OUTPUT_DIR");
     }
     const fs::path root = fs::absolute(argv[1]);
     const fs::path output = fs::absolute(argv[2]);

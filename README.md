@@ -18,3 +18,5 @@ The [data-v1 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/d
 The simulation requires ROOT with TFoam and TMVA and a C++17 compiler. Python dependencies are listed in `requirements.txt`; individual scripts may need additional tools. See [project workflows](docs/PROJECT_WORKFLOWS.md) and the protocol documents under `docs/`.
 
 This package was assembled from existing outputs; the complete simulation was not rerun during upload. External papers and private documents are excluded. Public ancillary reference distributions used by historical comparison scripts must be obtained from the cited original work.
+
+For the Figure 3 macro, data paths, and generator files, see the [code guide](src/README.md).
