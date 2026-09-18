@@ -55,5 +55,10 @@ bin/validate_sealed_sample: src/validate_sealed_sample.cpp
 plot:
 	./scripts/reproduce_plot.sh
 
+# arXiv manuscript (standard article class; independent of simulation outputs).
+.PHONY: paper-arxiv
+paper-arxiv:
+	./paper/arxiv/build.sh
+
 clean:
 	rm -f $(TARGETS)
