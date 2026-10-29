@@ -1,10 +1,18 @@
-/data/
-/models/
+# Large simulation artifacts are distributed through releases.
+/v1/data/
+/v1/models/
+/v2/data/
+/v2/models/
 *.root
 __pycache__/
 *.pyc
 .DS_Store
-paper/latex/build/
+
+# Manuscripts stay local for both versions.
+/paper/
+/v1/paper/
+/v2/paper/
+**/build_manuscript.py
 *.aux
 *.log
 *.out
@@ -12,15 +20,17 @@ paper/latex/build/
 *.fdb_latexmk
 *.synctex.gz
 
-# Manuscripts remain local and must not be published here.
-/paper/
-/scripts/build_manuscript.py
-
-# Local build products and release staging
-/revision/bin/
-
+# Local build products and release downloads.
 /bin/
-/revision/**/bin/
-/figures/*/generated/
+/v1/bin/
+/v2/bin/
+/v2/revision/**/bin/
+/v1/figures/*/generated/
+/v2/figures/*/generated/
+/v1/download/
+/v2/revision-download/
 
-/revision-download/
+# Original release archives downloaded directly into v1.
+/v1/*.tar.gz
+/v1/*.part-*
+/v1/SHA256SUMS

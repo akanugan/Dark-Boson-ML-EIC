@@ -1,0 +1,14 @@
+{
+  "v1": {
+    "source_commit": "f75b3cd8bba4fa007cc6dc3f934153e26040da6d",
+    "scope": "Original public BDT-versus-cuts study; scientific files preserved from this snapshot."
+  },
+  "v2": {
+    "source_commit": "d9fb2e33b641c0062d1315bd1cb299a7aad0e760",
+    "scope": "Current corrected three-method study; scientific files relocated without content changes."
+  },
+  "data_releases_unchanged": [
+    "data-v1",
+    "revision-data-v2"
+  ]
+}
