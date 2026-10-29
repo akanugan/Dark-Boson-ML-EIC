@@ -87,7 +87,7 @@
     },
     {
       "path": "rate_benchmark/sources/DarkBosonKinematics.h",
-      "sha256": "195c629ed71b737f04584ed182b3b1259024355dc1eb6b2bdc8c407a89c7261f",
+      "sha256": "1aa082fe77d563d65f3fb2ddb6685a49c63dd1241b575208e27e0ca8d987f484",
       "original_sha256": "195c629ed71b737f04584ed182b3b1259024355dc1eb6b2bdc8c407a89c7261f",
       "source_present": true
     },
