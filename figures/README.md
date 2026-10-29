@@ -1,26 +1,29 @@
-# Figure code and data
+# Current figure code and data
 
-- [Figure 1: diagrams](01_diagrams/)
-- [Figure 2: cross sections](02_cross_sections/)
-- [Figure 3: photon shapes](03_photon_shapes/)
-- [Figure 4: kinematics](04_kinematics/)
-- [Figure 5: mass scan](05_mass_scan/)
-- [Figure 6: roc](06_roc/)
-- [Figure 7: importance](07_importance/)
-- [Figure 8: independent runs](08_independent_runs/)
+| Figure | Content | Folder |
+|---|---|---|
+| 1 | Production diagrams | [01_diagrams](01_diagrams/) |
+| 2 | Signal cross sections | [02_cross_sections](02_cross_sections/) |
+| 3 | Inclusive photon shapes and reference comparison | [03_photon_shapes](03_photon_shapes/) |
+| 4 | Corrected joint kinematic distributions | [04_kinematics](04_kinematics/) |
+| 5 | All six selections relative to preselection | [05_selections](05_selections/) |
+| 6 | Benefit of adding t within each method | [06_t_gain](06_t_gain/) |
+| 7 | Pairwise method comparisons | [07_methods](07_methods/) |
+| 8 | Signal–photon efficiency curves | [08_roc](08_roc/) |
+| 9 | BDT variable importance | [09_importance](09_importance/) |
 
-Each folder holds its plotting macro, small numerical inputs, and rendered figure. Figure 1 has only a rendered diagram. Large ROOT files and trained models remain in the data-v1 release. Figures 3, 4, and 6 retain their event-level reproduction paths; their CSV files are also included for direct inspection. No manuscript source or manuscript PDF is included.
+Each folder contains the current rendered figure, its plotting code, numerical inputs and a README. Figure 1 is an image asset because its editable drawing source was not available. Figures 2–3 are unchanged from the original submission; Figures 4–9 use the corrected comparison. Earlier Figure 4–8 files are retained under [archive/original_figures](../archive/original_figures/).
 
-## Exact reproduction check
+Figures 2 and 5–9 can be plotted directly from included CSV inputs with NumPy and Matplotlib. Figure 4 draws the included binned data using ROOT and a C++17 compiler, without event downloads. Figure 3’s original ROOT macro reads the inclusive sample in the historical `data-v1` release; its reference histograms and binned comparison are also included for inspection. Refer to each folder for exact commands.
 
-Figures 2-8 were regenerated and compared with the exact assets included by the manuscript's `main.tex`. All seven passed exact RGB-pixel comparison. PNGs were compared at native resolution; PDFs (Figures 5 and 8) were rasterized at 160 dpi with the same Poppler renderer. PDF binary hashes can differ because of creation timestamps, even when rendered figures are identical.
+## Verification
 
-Run from the repository root after restoring release events/models:
+From the repository root:
 
 ```sh
-python3 figures/verify.py --report /tmp/figure-verification.json
+python3 figures/verify.py --project-root /path/to/project --report /tmp/figure-check.json
 ```
 
-The verifier builds in a temporary directory and leaves the checked-in figures untouched. Use `--project-root /path/to/project` if the large data and models are in another checkout. It requires ROOT/TMVA, a C++ compiler, Matplotlib, Pillow, and `pdftoppm` on PATH. The recorded run used ROOT 6.36.04, Matplotlib 3.11.2, Pillow 12.3.0, and Poppler 26.07.0. Different renderer/font versions may change pixels. See `verification.json` for the measured hashes.
+The project root supplied here must contain the original Figure 3 inclusive ROOT sample and ancillary inputs. To verify all other figures without that sample, add `--skip-legacy`. ROOT is still required for Figure 4. The verifier uses temporary output directories and leaves the checked-in figures unchanged. It compares PNGs at native resolution and PDFs rendered at 160 dpi using Poppler. PDF timestamps may differ even when the rendered pixels match exactly. Renderer, font and library versions can affect pixel identity.
 
-Figure 1 is the exact manuscript image, but cannot be regenerated from drawing commands because its editable source was not found. It is excluded from the macro verification.
+See `verification.json` and the individual figure verification records for the measured results. No manuscript source or complete manuscript PDF is distributed here.

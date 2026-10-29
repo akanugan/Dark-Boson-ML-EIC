@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-28",
+  "numerical_replay": "checks/public_replay.json",
+  "figure_reproduction": "../figures/verification.json",
+  "current_sources_compile": true,
+  "python_syntax_checked": true,
+  "manuscript_excluded": true,
+  "latex_package_kept_local": true,
+  "raw_current_events_in_release": false,
+  "release_scope": "Current selected model weights, paired analysis arrays and run/provenance records; no full manuscript or raw ROOT event files."
+}

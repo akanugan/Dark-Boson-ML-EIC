@@ -1,0 +1,96 @@
+--- revision_analysis/src/generate_photon_lab.cpp
++++ revision_analysis/rate_benchmark/sources/lab_transformed.cpp
+@@ -89,6 +89,8 @@
+   bool integrate_paper_cut = false;
+   bool quiet = false;
+   std::string photon_region = "all";
++  bool fold_phi = false;
++  bool log_electron_energy = false;
+ };
+ 
+ double selection_mass(const GeneratorConfig& cfg) {
+@@ -167,7 +169,15 @@
+     const double ch = std::cosh(eta_e);
+     const double min_energy = std::sqrt(kElectronMass*kElectronMass+std::pow(cut.pt_min*ch,2));
+     if (!(cut.energy_max>min_energy)) return false;
+-    const double energy_e = min_energy+x[1]*(cut.energy_max-min_energy);
++    // Both maps cover the identical energy interval at this electron eta.
++    // The Jacobian is dE/du, including eta-dependent min_energy exactly.
++    const double log_energy_span = std::log(cut.energy_max / min_energy);
++    const double energy_e = cfg_.log_electron_energy
++        ? min_energy * std::exp(x[1] * log_energy_span)
++        : min_energy + x[1] * (cut.energy_max - min_energy);
++    const double jac_energy = cfg_.log_electron_energy
++        ? energy_e * log_energy_span
++        : cut.energy_max - min_energy;
+     const double momentum_e = std::sqrt(energy_e*energy_e-kElectronMass*kElectronMass);
+     TLorentzVector electron_out_lab(momentum_e/ch,0,momentum_e*std::tanh(eta_e),energy_e);
+     const double edge=std::tanh(3.5);
+@@ -179,7 +189,11 @@
+       jac_cos=2*(1-edge);
+     } else {cg=-1+2*x[2];jac_cos=2;}
+     const double sg=std::sqrt(std::max(0.,1-cg*cg));
+-    const double phi=2*TMath::Pi()*x[3];
++    // The integrand is invariant under simultaneous final-state y reflection.
++    // Folding integrates both mirror configurations analytically; the full
++    // 2*pi azimuth Jacobian below MUST remain. Event output keeps only one
++    // signed-y representative and is for rate / reflection-invariant checks.
++    const double phi=(cfg_.fold_phi ? TMath::Pi() : 2*TMath::Pi())*x[3];
+     const TVector3 direction(sg*std::cos(phi),sg*std::sin(phi),cg);
+     const TLorentzVector available=electron_in_lab_+ion_in_lab_-electron_out_lab;
+     const double apar=available.Vect().Dot(direction), a0=available.E();
+@@ -238,7 +252,7 @@
+     const double shell_jac=std::abs(a0*momentum_g-energy_g*apar);
+     if (!(shell_jac>0)) return false;
+     const double phase=momentum_e*momentum_g*momentum_g/(std::pow(2*TMath::Pi(),4)*32*p_initial_cm_*sqrt_s_*shell_jac);
+-    const double map_jac=(eta_hi-cut.eta_min)*(cut.energy_max-min_energy)/(ch*ch)*jac_cos*(2*TMath::Pi());
++    const double map_jac=(eta_hi-cut.eta_min)*jac_energy/(ch*ch)*jac_cos*(2*TMath::Pi());
+     density_pb=matrix_squared*phase*map_jac*kGeV2ToPb;
+     if (!(density_pb>=0 && std::isfinite(density_pb))) return false;
+     event.s_tilde=s_tilde;event.u_tilde=u_tilde;event.t2=t2;
+@@ -329,6 +343,8 @@
+       << "  --ion-energy-per-A GeV     Ion energy per nucleon\n"
+       << "  --ion-mass GeV             Gold-ion mass\n"
+       << "  --integrate-paper-cut      Adapt directly to the selected phase space\n"
++      << "  --fold-phi                 Analytically integrate azimuth mirrors; rate diagnostics only\n"
++      << "  --log-electron-energy      Log map on the identical allowed electron-energy interval\n"
+       << "  --quiet                     Suppress TFoam progress\n"
+       << "  --help                      Show this message\n";
+ }
+@@ -370,6 +386,10 @@
+     } else if (option == "--photon-region") {
+       cfg.photon_region = value();
+       if (cfg.photon_region != "all" && cfg.photon_region != "central" && cfg.photon_region != "outside") throw std::runtime_error("invalid photon region");
++    } else if (option == "--fold-phi") {
++      cfg.fold_phi = true;
++    } else if (option == "--log-electron-energy") {
++      cfg.log_electron_energy = true;
+     } else if (option == "--quiet") {
+       cfg.quiet = true;
+     } else if (option == "--help" || option == "-h") {
+@@ -403,6 +423,12 @@
+       << ";events=" << cfg.events << ";cells=" << cfg.cells
+       << ";samples=" << cfg.samples << ";seed=" << cfg.seed;
+   out << ";phase_space_mapping=lab;photon_region=" << cfg.photon_region;
++  out << ";electron_energy_mapping=" << (cfg.log_electron_energy ? "log" : "linear")
++      << ";fold_phi=" << (cfg.fold_phi ? 1 : 0)
++      << ";log_electron_energy=" << (cfg.log_electron_energy ? 1 : 0)
++      << ";azimuth_mirror_integrated=" << (cfg.fold_phi ? 1 : 0)
++      << ";signed_azimuth_distribution=" << (cfg.fold_phi ? "one_representative_per_mirror_pair" : "full")
++      << ";diagnostic_source=rate_benchmark_lab_transformed";
+   out << ";integrate_paper_cut=" << (cfg.integrate_paper_cut ? 1 : 0);
+   return out.str();
+ }
+@@ -458,6 +484,12 @@
+ int main(int argc, char** argv) {
+   try {
+     const GeneratorConfig cfg = parse_arguments(argc, argv);
++    if (cfg.fold_phi) {
++      std::cerr << "DIAGNOSTIC: azimuth mirrors are integrated analytically. "
++                   "Each stored event represents both y signs; signed azimuth "
++                   "is not sampled. Use only rates and reflection-invariant "
++                   "observables until mirror restoration.\n";
++    }
+     std::filesystem::path output_path(cfg.output);
+     if (output_path.has_parent_path()) {
+       std::filesystem::create_directories(output_path.parent_path());

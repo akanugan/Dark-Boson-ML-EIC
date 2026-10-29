@@ -1,110 +1,199 @@
 {
-  "comparison": "Exact RGB pixels; PDFs rasterized at 160 dpi with pdftoppm",
-  "figure_1": "Rendered diagram only; no editable drawing source available",
+  "comparison": "Exact RGB pixels; PDFs rasterized with Poppler at 160 dpi",
+  "figure_1": {
+    "status": "asset_only",
+    "reason": "Editable diagram source was not available",
+    "sha256": "99dca534e8ae48b6f696dc97824cd4f28a8acc17a843bd815f95576c72ec5a76"
+  },
   "figures": [
     {
       "figure": 2,
-      "identical_pixels": true,
-      "reference_size": [
-        2520,
-        1728
-      ],
-      "generated_size": [
-        2520,
-        1728
-      ],
-      "reference_rgb_sha256": "626cc3ca3eaea22c6a96b897752f21f922a5fff7971426007865d4c7bbe2394d",
-      "generated_rgb_sha256": "626cc3ca3eaea22c6a96b897752f21f922a5fff7971426007865d4c7bbe2394d"
+      "status": "pass",
+      "checks": [
+        {
+          "format": "png",
+          "exact_rgb_pixels": true,
+          "size": [
+            2520,
+            1728
+          ],
+          "reference_rgb_sha256": "626cc3ca3eaea22c6a96b897752f21f922a5fff7971426007865d4c7bbe2394d",
+          "generated_rgb_sha256": "626cc3ca3eaea22c6a96b897752f21f922a5fff7971426007865d4c7bbe2394d"
+        }
+      ]
     },
     {
       "figure": 3,
-      "identical_pixels": true,
-      "reference_size": [
-        1496,
-        622
-      ],
-      "generated_size": [
-        1496,
-        622
-      ],
-      "reference_rgb_sha256": "9c423c964dd25cf94ef59b4b22e38ae477f1d554d7be81d3e11bd524779d30e4",
-      "generated_rgb_sha256": "9c423c964dd25cf94ef59b4b22e38ae477f1d554d7be81d3e11bd524779d30e4"
+      "status": "pass",
+      "checks": [
+        {
+          "format": "png",
+          "exact_rgb_pixels": true,
+          "size": [
+            1496,
+            622
+          ],
+          "reference_rgb_sha256": "9c423c964dd25cf94ef59b4b22e38ae477f1d554d7be81d3e11bd524779d30e4",
+          "generated_rgb_sha256": "9c423c964dd25cf94ef59b4b22e38ae477f1d554d7be81d3e11bd524779d30e4"
+        }
+      ]
     },
     {
       "figure": 4,
-      "identical_pixels": true,
-      "reference_size": [
-        1796,
-        1002
-      ],
-      "generated_size": [
-        1796,
-        1002
-      ],
-      "reference_rgb_sha256": "c728897796e009677a6916c8496975209ae97ab2cb35258dbd8ebdcbe9563529",
-      "generated_rgb_sha256": "c728897796e009677a6916c8496975209ae97ab2cb35258dbd8ebdcbe9563529"
+      "status": "pass",
+      "checks": [
+        {
+          "format": "png",
+          "exact_rgb_pixels": true,
+          "size": [
+            2096,
+            1372
+          ],
+          "reference_rgb_sha256": "008d779f2852d5b8c7147baf696d0dd0525855a128a00a83859f190cc3602408",
+          "generated_rgb_sha256": "008d779f2852d5b8c7147baf696d0dd0525855a128a00a83859f190cc3602408"
+        },
+        {
+          "format": "pdf",
+          "exact_rgb_pixels": true,
+          "size": [
+            1872,
+            1323
+          ],
+          "reference_rgb_sha256": "60e8fae7e1b87a30fa761d7797521f61f7e6788d1435d262586fcb92ba00bff3",
+          "generated_rgb_sha256": "60e8fae7e1b87a30fa761d7797521f61f7e6788d1435d262586fcb92ba00bff3"
+        }
+      ]
     },
     {
       "figure": 5,
-      "identical_pixels": true,
-      "reference_size": [
-        1184,
-        504
-      ],
-      "generated_size": [
-        1184,
-        504
-      ],
-      "reference_rgb_sha256": "e2a9266e0d88ee99a71e8c3f6c7780dde74c5c86dea342c7d7a3598d46d62721",
-      "generated_rgb_sha256": "e2a9266e0d88ee99a71e8c3f6c7780dde74c5c86dea342c7d7a3598d46d62721"
+      "status": "pass",
+      "checks": [
+        {
+          "format": "png",
+          "exact_rgb_pixels": true,
+          "size": [
+            2160,
+            954
+          ],
+          "reference_rgb_sha256": "33104481f68b3e11c998ea3fa9f12d1526c4a5335a37e53bd0a117d0384976a3",
+          "generated_rgb_sha256": "33104481f68b3e11c998ea3fa9f12d1526c4a5335a37e53bd0a117d0384976a3"
+        },
+        {
+          "format": "pdf",
+          "exact_rgb_pixels": true,
+          "size": [
+            1920,
+            848
+          ],
+          "reference_rgb_sha256": "d14f595ad72dfc9d8a9b0422f8f83383bda944b5a254242c0c4e2cb42109d00f",
+          "generated_rgb_sha256": "d14f595ad72dfc9d8a9b0422f8f83383bda944b5a254242c0c4e2cb42109d00f"
+        }
+      ]
     },
     {
       "figure": 6,
-      "identical_pixels": true,
-      "reference_size": [
-        1496,
-        622
-      ],
-      "generated_size": [
-        1496,
-        622
-      ],
-      "reference_rgb_sha256": "5c5842aa68f50b0b377633ba4752ed084fb7be12862e686b384301462e4a8b50",
-      "generated_rgb_sha256": "5c5842aa68f50b0b377633ba4752ed084fb7be12862e686b384301462e4a8b50"
+      "status": "pass",
+      "checks": [
+        {
+          "format": "png",
+          "exact_rgb_pixels": true,
+          "size": [
+            1980,
+            774
+          ],
+          "reference_rgb_sha256": "133e847af5085dd0511dcfd9e10d66a78c7ab009fbce67ec1689172a677de40e",
+          "generated_rgb_sha256": "133e847af5085dd0511dcfd9e10d66a78c7ab009fbce67ec1689172a677de40e"
+        },
+        {
+          "format": "pdf",
+          "exact_rgb_pixels": true,
+          "size": [
+            1760,
+            688
+          ],
+          "reference_rgb_sha256": "6ec6cd4d98501ae6855ec657dbe3737a659fde9cf08b173d1c600a02c4142799",
+          "generated_rgb_sha256": "6ec6cd4d98501ae6855ec657dbe3737a659fde9cf08b173d1c600a02c4142799"
+        }
+      ]
     },
     {
       "figure": 7,
-      "identical_pixels": true,
-      "reference_size": [
-        1096,
-        692
-      ],
-      "generated_size": [
-        1096,
-        692
-      ],
-      "reference_rgb_sha256": "885a6a67bf40f07fd0e97afa8ed079f382f730cfac7b218b412fa8fa2bf56b4c",
-      "generated_rgb_sha256": "885a6a67bf40f07fd0e97afa8ed079f382f730cfac7b218b412fa8fa2bf56b4c"
+      "status": "pass",
+      "checks": [
+        {
+          "format": "png",
+          "exact_rgb_pixels": true,
+          "size": [
+            2283,
+            1443
+          ],
+          "reference_rgb_sha256": "bffe8e4025179a9fba9ea432b2efdadbdf4bec6d8a9fb9b6fdee36ff5403b135",
+          "generated_rgb_sha256": "bffe8e4025179a9fba9ea432b2efdadbdf4bec6d8a9fb9b6fdee36ff5403b135"
+        },
+        {
+          "format": "pdf",
+          "exact_rgb_pixels": true,
+          "size": [
+            1827,
+            1155
+          ],
+          "reference_rgb_sha256": "913a6da804ef0062ce2a55d57fce5595631490c746e9956d34f2ce5927ce8127",
+          "generated_rgb_sha256": "913a6da804ef0062ce2a55d57fce5595631490c746e9956d34f2ce5927ce8127"
+        }
+      ]
     },
     {
       "figure": 8,
-      "identical_pixels": true,
-      "reference_size": [
-        1184,
-        480
-      ],
-      "generated_size": [
-        1184,
-        480
-      ],
-      "reference_rgb_sha256": "04b3c10c99bf850b8583706d2da88124e21e173ead8c635c9a8fe40830a6c9d0",
-      "generated_rgb_sha256": "04b3c10c99bf850b8583706d2da88124e21e173ead8c635c9a8fe40830a6c9d0"
+      "status": "pass",
+      "checks": [
+        {
+          "format": "png",
+          "exact_rgb_pixels": true,
+          "size": [
+            2214,
+            933
+          ],
+          "reference_rgb_sha256": "7f7cb811836d75785d56514e323a2ad28afa6e702b5bf85d74c615ceb6f06145",
+          "generated_rgb_sha256": "7f7cb811836d75785d56514e323a2ad28afa6e702b5bf85d74c615ceb6f06145"
+        },
+        {
+          "format": "pdf",
+          "exact_rgb_pixels": true,
+          "size": [
+            1772,
+            750
+          ],
+          "reference_rgb_sha256": "b8dfc8ffcea70c60681e5bcc62a473547555de59c23c16ca0efb7f6fb8230fd2",
+          "generated_rgb_sha256": "b8dfc8ffcea70c60681e5bcc62a473547555de59c23c16ca0efb7f6fb8230fd2"
+        }
+      ]
+    },
+    {
+      "figure": 9,
+      "status": "pass",
+      "checks": [
+        {
+          "format": "png",
+          "exact_rgb_pixels": true,
+          "size": [
+            1633,
+            872
+          ],
+          "reference_rgb_sha256": "abd3fe54b6829d88a732a684582f0c7e880b5b548408d5ff8818b9fb7c632807",
+          "generated_rgb_sha256": "abd3fe54b6829d88a732a684582f0c7e880b5b548408d5ff8818b9fb7c632807"
+        },
+        {
+          "format": "pdf",
+          "exact_rgb_pixels": true,
+          "size": [
+            1306,
+            700
+          ],
+          "reference_rgb_sha256": "3a37c644391c8595e7f16018900ae427f614df5077f8c45c4ecae777867fac59",
+          "generated_rgb_sha256": "3a37c644391c8595e7f16018900ae427f614df5077f8c45c4ecae777867fac59"
+        }
+      ]
     }
   ],
-  "environment": {
-    "ROOT": "6.36.04",
-    "Matplotlib": "3.11.2",
-    "Pillow": "12.3.0",
-    "Poppler": "26.07.0"
-  }
+  "all_tested_figures_exact": true
 }

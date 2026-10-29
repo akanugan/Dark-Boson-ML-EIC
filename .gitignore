@@ -1,5 +1,5 @@
-data/
-models/
+/data/
+/models/
 *.root
 __pycache__/
 *.pyc
@@ -15,3 +15,12 @@ paper/latex/build/
 # Manuscripts remain local and must not be published here.
 /paper/
 /scripts/build_manuscript.py
+
+# Local build products and release staging
+/revision/bin/
+
+/bin/
+/revision/**/bin/
+/figures/*/generated/
+
+/revision-download/

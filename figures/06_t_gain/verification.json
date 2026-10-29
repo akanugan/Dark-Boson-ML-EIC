@@ -1,0 +1,38 @@
+{
+  "figure": "06_t_gain",
+  "exit_code": 0,
+  "expected_shape": [
+    774,
+    1980,
+    3
+  ],
+  "generated_shape": [
+    774,
+    1980,
+    3
+  ],
+  "exact_rgb_pixels": true,
+  "pdf_created": true,
+  "differing_pixels": 0,
+  "pdf_exact_rendered_rgb_pixels": true,
+  "pdf_render_shape": [
+    688,
+    1760,
+    3
+  ],
+  "pdf_differing_pixels": 0,
+  "pdf_renderer": "Poppler pdftoppm, 160 dpi",
+  "renderer_note": "Exact equality measured with the same graphics libraries and fonts; alternate versions may preserve data while changing pixels.",
+  "libraries": {
+    "ROOT": "6.36.04 (Figure 4)",
+    "Matplotlib": "3.11.2",
+    "NumPy": "2.5.4",
+    "Pillow": "13.0.0"
+  },
+  "sha256": {
+    "data/t_gain.csv": "8cf5347307ef9941040f175d3138717f2e85b79fd37a2c79040ca763495252a4",
+    "figure.pdf": "950af4d9fabcfe7e2843d45a7984ef51dda3497e7b59433ff6afd7bf0cbbdd5e",
+    "figure.png": "e83d3e79ece72d46ac8b8b385b632e83abdb9339b9995802128f5f228762401a",
+    "plot.py": "06c3a62054263f3a003d3f8b251c70c49cb3c2efec26031cda2ee8eae4ef871c"
+  }
+}

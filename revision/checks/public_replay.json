@@ -1,0 +1,28 @@
+{
+  "scope": "Portable inference-only replay from 220 saved analysis records; no generation or fitting",
+  "checks": [
+    {
+      "table": "summary.csv",
+      "rows": 198,
+      "numeric_tolerance": 1e-12,
+      "maximum_difference": 0,
+      "passed": true
+    },
+    {
+      "table": "selection_results.csv",
+      "rows": 132,
+      "numeric_tolerance": 1e-12,
+      "maximum_difference": 0,
+      "passed": true
+    },
+    {
+      "table": "scenario_summary.csv",
+      "rows": 2376,
+      "numeric_tolerance": 1e-12,
+      "maximum_difference": 0,
+      "passed": true
+    }
+  ],
+  "seconds": 25.84556887485087,
+  "all_passed": true
+}

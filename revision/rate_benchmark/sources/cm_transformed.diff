@@ -1,0 +1,84 @@
+--- revision_analysis/rate_benchmark/sources/historical.cpp
++++ revision_analysis/rate_benchmark/sources/cm_transformed.cpp
+@@ -87,6 +87,8 @@
+   unsigned long seed = 250508871;
+   std::string output = "data/root/vector_m1.root";
+   std::string photon_region = "all";
++  bool fold_phi = false;
++  bool log_pair_mass = false;
+   bool integrate_paper_cut = false;
+   bool quiet = false;
+ };
+@@ -169,13 +171,21 @@
+       return false;
+     }
+ 
+-    const double pair_mass =
+-        min_pair_mass + x[1] * (max_pair_mass - min_pair_mass);
+-    const double jacobian_pair_mass = max_pair_mass - min_pair_mass;
++    // Equivalent maps of the identical t-dependent pair-mass interval.
++    const double log_mass_span = std::log(max_pair_mass / min_pair_mass);
++    const double pair_mass = cfg_.log_pair_mass
++        ? min_pair_mass * std::exp(x[1] * log_mass_span)
++        : min_pair_mass + x[1] * (max_pair_mass - min_pair_mass);
++    const double jacobian_pair_mass = cfg_.log_pair_mass
++        ? pair_mass * log_mass_span
++        : max_pair_mass - min_pair_mass;
+     const double cos_decay = 2.0 * x[2] - 1.0;
+     const double sin_decay =
+         std::sqrt(std::max(0.0, 1.0 - cos_decay * cos_decay));
+-    const double decay_phi = 2.0 * TMath::Pi() * x[3];
++    // All invariants and present cuts are unchanged by final-state y reflection.
++    // A folded event represents both mirror configurations analytically;
++    // retain the full angular_jacobian below. Signed azimuth is not restored.
++    const double decay_phi = (cfg_.fold_phi ? TMath::Pi() : 2.0 * TMath::Pi()) * x[3];
+     const double angular_jacobian = 4.0 * TMath::Pi();
+ 
+     const HighPrecision h_root_s(sqrt_s_);
+@@ -401,6 +411,8 @@
+       << "  --ion-mass GeV             Gold-ion mass\n"
+       << "  --photon-region name       all, central, forward, or effective\n"
+       << "  --integrate-paper-cut      Adapt directly to the selected phase space\n"
++      << "  --fold-phi                 Analytically integrate azimuth mirrors; rate diagnostics only\n"
++      << "  --log-pair-mass            Log map on the identical allowed pair-mass interval\n"
+       << "  --quiet                     Suppress TFoam progress\n"
+       << "  --help                      Show this message\n";
+ }
+@@ -441,6 +453,10 @@
+       cfg.photon_region = value();
+     } else if (option == "--integrate-paper-cut") {
+       cfg.integrate_paper_cut = true;
++    } else if (option == "--fold-phi") {
++      cfg.fold_phi = true;
++    } else if (option == "--log-pair-mass") {
++      cfg.log_pair_mass = true;
+     } else if (option == "--quiet") {
+       cfg.quiet = true;
+     } else if (option == "--help" || option == "-h") {
+@@ -479,6 +495,13 @@
+       << ";events=" << cfg.events << ";cells=" << cfg.cells
+       << ";samples=" << cfg.samples << ";seed=" << cfg.seed;
+   out << ";photon_region=" << cfg.photon_region;
++  out << ";phase_space_mapping=cm"
++      << ";pair_mass_mapping=" << (cfg.log_pair_mass ? "log" : "linear")
++      << ";fold_phi=" << (cfg.fold_phi ? 1 : 0)
++      << ";log_pair_mass=" << (cfg.log_pair_mass ? 1 : 0)
++      << ";azimuth_mirror_integrated=" << (cfg.fold_phi ? 1 : 0)
++      << ";signed_azimuth_distribution=" << (cfg.fold_phi ? "one_representative_per_mirror_pair" : "full")
++      << ";diagnostic_source=rate_benchmark_cm_transformed";
+   out << ";integrate_paper_cut=" << (cfg.integrate_paper_cut ? 1 : 0);
+   return out.str();
+ }
+@@ -534,6 +557,12 @@
+ int main(int argc, char** argv) {
+   try {
+     const GeneratorConfig cfg = parse_arguments(argc, argv);
++    if (cfg.fold_phi) {
++      std::cerr << "DIAGNOSTIC: azimuth mirrors are integrated analytically. "
++                   "Each stored event represents both y signs; signed azimuth "
++                   "is not sampled. Use only rates and reflection-invariant "
++                   "observables until mirror restoration.\n";
++    }
+     std::filesystem::path output_path(cfg.output);
+     if (output_path.has_parent_path()) {
+       std::filesystem::create_directories(output_path.parent_path());

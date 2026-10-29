@@ -1,0 +1,40 @@
+{
+  "figure": "04_kinematics",
+  "exit_code": 0,
+  "expected_shape": [
+    1372,
+    2096,
+    3
+  ],
+  "generated_shape": [
+    1372,
+    2096,
+    3
+  ],
+  "exact_rgb_pixels": true,
+  "pdf_created": true,
+  "differing_pixels": 0,
+  "pdf_exact_rendered_rgb_pixels": true,
+  "pdf_render_shape": [
+    1323,
+    1872,
+    3
+  ],
+  "pdf_differing_pixels": 0,
+  "pdf_renderer": "Poppler pdftoppm, 160 dpi",
+  "renderer_note": "Exact equality measured with the same graphics libraries and fonts; alternate versions may preserve data while changing pixels.",
+  "libraries": {
+    "ROOT": "6.36.04 (Figure 4)",
+    "Matplotlib": "3.11.2",
+    "NumPy": "2.5.4",
+    "Pillow": "13.0.0"
+  },
+  "sha256": {
+    "data/bins.csv": "121454d402e9632ca674a4af8c14e7fc0b6020bbc071b11533606e37aefa4664",
+    "data/flows.csv": "28f83770aa3020679179ff07f071736cc42e717fcbbb3fff4e63fa6514cbb444",
+    "draw.cpp": "c287b26425d41c121b4a984659459d5cdcedee8f4b5d9d6094972cfd59ca8690",
+    "figure.pdf": "55e27d92c5bdabdc900a14a50cce394334b5e4979b9cc5b3a9a761f2d3f301dc",
+    "figure.png": "afa221f8be18a80fc1e4939e860c5982157d09e23dc78d07afe91cd205918f5a",
+    "plot.py": "3b03f25ed8a3f7cc3ddad7d61b13553b447bfe8b547944e0463cb53bf9c46e78"
+  }
+}

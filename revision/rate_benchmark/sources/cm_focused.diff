@@ -1,0 +1,81 @@
+--- revision_analysis/rate_benchmark/sources/cm_transformed.cpp
++++ revision_analysis/rate_benchmark/sources/cm_focused.cpp
+@@ -89,6 +89,8 @@
+   std::string photon_region = "all";
+   bool fold_phi = false;
+   bool log_pair_mass = false;
++  double t_importance_center = 0.0;  // Zero disables the optional full-domain map.
++  double t_importance_width = 1.5;
+   bool integrate_paper_cut = false;
+   bool quiet = false;
+ };
+@@ -162,8 +164,23 @@
+   bool build_event(const double* x, darkboson::EventKinematics& event,
+                    double& density_pb) const {
+     const double log_ratio = std::log(t_max_ / t_min_);
+-    const double t = t_min_ * std::exp(log_ratio * x[0]);
+-    const double jacobian_t = t * log_ratio;
++    double t = 0.0, jacobian_t = 0.0;
++    if (cfg_.t_importance_center > 0.0) {
++      // Full-domain Cauchy importance map in log(t). This does NOT impose a
++      // t cut: its endpoints are the unchanged physical t_min_ and t_max_.
++      const double log_center = std::log(cfg_.t_importance_center);
++      const double width = cfg_.t_importance_width;
++      const double angle_lo = std::atan((std::log(t_min_) - log_center) / width);
++      const double angle_hi = std::atan((std::log(t_max_) - log_center) / width);
++      const double angle_span = angle_hi - angle_lo;
++      const double angle = angle_lo + x[0] * angle_span;
++      t = std::exp(log_center + width * std::tan(angle));
++      const double cosine = std::cos(angle);
++      jacobian_t = t * width * angle_span / (cosine * cosine);
++    } else {
++      t = t_min_ * std::exp(log_ratio * x[0]);
++      jacobian_t = t * log_ratio;
++    }
+ 
+     const double min_pair_mass = kElectronMass + cfg_.mass;
+     const double max_pair_mass = pair_mass_max(t);
+@@ -413,6 +430,8 @@
+       << "  --integrate-paper-cut      Adapt directly to the selected phase space\n"
+       << "  --fold-phi                 Analytically integrate azimuth mirrors; rate diagnostics only\n"
+       << "  --log-pair-mass            Log map on the identical allowed pair-mass interval\n"
++      << "  --t-importance-center GeV2 Full-domain importance-map center; zero disables (default)\n"
++      << "  --t-importance-width w     Positive Cauchy width in log(t) (default 1.5)\n"
+       << "  --quiet                     Suppress TFoam progress\n"
+       << "  --help                      Show this message\n";
+ }
+@@ -457,6 +476,10 @@
+       cfg.fold_phi = true;
+     } else if (option == "--log-pair-mass") {
+       cfg.log_pair_mass = true;
++    } else if (option == "--t-importance-center") {
++      cfg.t_importance_center = parse_double(value(), option);
++    } else if (option == "--t-importance-width") {
++      cfg.t_importance_width = parse_double(value(), option);
+     } else if (option == "--quiet") {
+       cfg.quiet = true;
+     } else if (option == "--help" || option == "-h") {
+@@ -469,6 +492,10 @@
+   if (!(cfg.mass > 0.0 && cfg.coupling > 0.0 && cfg.events > 0 &&
+         cfg.cells > 0 && cfg.samples > 0)) {
+     throw std::runtime_error("Mass, coupling, events, cells, and samples must be positive");
++  }
++  if (!(std::isfinite(cfg.t_importance_center) && cfg.t_importance_center >= 0.0 &&
++        std::isfinite(cfg.t_importance_width) && cfg.t_importance_width > 0.0)) {
++    throw std::runtime_error("t importance center must be finite and nonnegative; width finite and positive");
+   }
+   if (cfg.photon_region != "all" && cfg.photon_region != "central" &&
+       cfg.photon_region != "forward" && cfg.photon_region != "effective") {
+@@ -501,7 +528,11 @@
+       << ";log_pair_mass=" << (cfg.log_pair_mass ? 1 : 0)
+       << ";azimuth_mirror_integrated=" << (cfg.fold_phi ? 1 : 0)
+       << ";signed_azimuth_distribution=" << (cfg.fold_phi ? "one_representative_per_mirror_pair" : "full")
+-      << ";diagnostic_source=rate_benchmark_cm_transformed";
++      << ";t_mapping=" << (cfg.t_importance_center > 0.0 ? "full_domain_log_cauchy" : "log_uniform")
++      << ";t_importance_center_GeV2=" << cfg.t_importance_center
++      << ";t_importance_width=" << cfg.t_importance_width
++      << ";t_physical_bounds_preserved=1"
++      << ";diagnostic_source=rate_benchmark_cm_focused";
+   out << ";integrate_paper_cut=" << (cfg.integrate_paper_cut ? 1 : 0);
+   return out.str();
+ }

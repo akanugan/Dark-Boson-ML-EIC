@@ -1,14 +1,28 @@
-# Figure 4: kinematics
+# Figure 4: weighted kinematics
 
-The `figure` image/PDF is the manuscript figure; `data/` contains its numerical inputs. Existing simulation pipelines remain in their original locations.
+`figure.pdf` and `figure.png` are the exact current figure assets.
 
-The `plot.cpp` entry point generates only this figure. Compile from the repository root:
+`data/bins.csv` contains the exact 36 by 36 displayed-bin probabilities for six panels. `data/flows.csv` records full class weights and probabilities outside the displayed rectangles. Panels use the first corrected test run at 1 and 10 GeV. Photon weights include the photon-miss probability exactly once. The visible bins sum to 100% minus the recorded overflow probability. `draw.cpp` reproduces the original ROOT styling from these bins.
+
+## Reproduce
+
+Dependencies: Python 3, ROOT (root-config on PATH), and a C++17 compiler. No ROOT event files are needed.
+
+From any working directory, run the script by its path. For example, from the repository root:
 
 ```sh
-c++ -std=c++17 $(root-config --cflags) figures/04_kinematics/plot.cpp -o /tmp/plot_fig4 $(root-config --libs) -lTMVA
-/tmp/plot_fig4 "$PWD" "$PWD/figures/04_kinematics"
+python3 figures/04_kinematics/plot.py --output-dir /tmp/dark-figure4
 ```
 
-Restore the ROOT events and models from the [data-v1 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/data-v1) into the repository layout first. The CSV files allow inspection without downloading these larger files.
+The script writes `figure.pdf` and `figure.png` to the chosen directory. Without
+`--output-dir`, it uses a local `generated/` directory and leaves the checked-in
+reference assets unchanged. All required plotting inputs are in this folder;
+no training, simulation, or model files are needed. Numerical values are fixed
+inputs from the completed corrected study, not recomputed statistical inference.
+Different graphics-library/font versions can change pixels while preserving the data.
 
-The macro reads sealed photon/vector/scalar event samples at 1 and 10 GeV in `data/ml/sealed/root/`. `data/t_pt_density.csv` contains the resulting normalized two-dimensional bins.
+## Verification
+
+`verification.json` records exact native PNG RGB equality and exact PDF-rendered
+RGB equality at 160 dpi against the current figure assets. Every comparison had
+zero differing pixels. It also records source hashes and graphics-library versions.

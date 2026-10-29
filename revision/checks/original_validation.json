@@ -1,0 +1,3128 @@
+{
+  "state": "passed",
+  "completed": 16,
+  "total": 16,
+  "errors": [],
+  "results": [
+    {
+      "case": "scalar_m5p000_rep001_electron_bdt",
+      "mass_GeV": 5.0,
+      "rep": 1,
+      "signal_type": "scalar",
+      "feature_set": "electron",
+      "method": "bdt",
+      "profile": "depth3",
+      "photon_xs_pb": 0.431200433,
+      "dis_xs_pb": "0.0204",
+      "seconds": 2.3705732822418213,
+      "signature": "a66796f5e816563fd523784997bb3c6bda31ba5f078d0f9bfbbf0d04f3f0af49",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron/bdt/depth3/metrics.csv": "2b0051796e770c636e96db4ff153c885c4c5aaa55a89a20beecd8bc98110f8f9",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron/bdt_selected.csv": "56be9ed4be6c250f3097cc1a48bc9fab2ec963afca76072bb1835b4193dca43a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron/bdt/depth3/dataset/weights/TMVAClassification_BDTG.weights.xml.gz": "a30aaed48dab96e398b6570723893a381ef834351b2db25b35e1cb820b48a9c0",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/data/signal_validation.root": "328b1b87f350e55bfdc584f1660c9fb5b4e06841ae9041f6cb290b7a6dca6c36",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_001/m5p000/validation.root": "0ab628035a412c0110a59664a7e1570783d9675e6083283c20a24c6daa06b11b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_bdt/original_model.xml": "9330383fc58dc317b7cf016ea2afc055195f1122f0f0fe6f465777302a412ded",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_bdt/validation_metrics.csv": "4ff65c1c3595a55b3beb5369370b32f2aef6357af452af069642bafb3b3972a1",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_bdt/command.json": "77eb04c00ade038d5b87f317cb0f526a789a33d5d87d474f804b831b55068a8b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_bdt/validation_signal_scores.csv": "b3f33e08e08b907d3687fd716aa8ca7f16eed0b237a2d05b2befafd61b5a05e3",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_bdt/validation_photon_scores.csv": "94d22514010f5fecd18c81b63783dfbe4901561f2ebb468250962b5ff5f92297",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_bdt/evaluation.log": "803f67890977eec04d9574aeb07db25bed91dd4cc1830b010a9ef5d0f6ebf7b5"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 13401.0,
+          "reproduced": 13401.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 119356.0,
+          "reproduced": 119356.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.683597683466,
+          "reproduced": 0.683597683466,
+          "absolute_difference": 0.0,
+          "tolerance": 3.9179884173300003e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": -0.284869678273,
+          "reproduced": -0.284869678273,
+          "absolute_difference": 0.0,
+          "tolerance": 1.9243483913650004e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.881901144646,
+          "reproduced": 0.881901144646,
+          "absolute_difference": 0.0,
+          "tolerance": 4.909505723230001e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.687488277787,
+          "reproduced": 0.687488277787,
+          "absolute_difference": 0.0,
+          "tolerance": 3.937441388935e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.05286693133,
+          "reproduced": 1.05286693133,
+          "absolute_difference": 0.0,
+          "tolerance": 5.764334656650001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.683597683466,
+          "reproduced": 0.683597683466,
+          "absolute_difference": 0.0,
+          "tolerance": 3.9179884173300003e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.881901144646,
+          "reproduced": 0.881901144646,
+          "absolute_difference": 0.0,
+          "tolerance": 4.909505723230001e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.687488277787,
+          "reproduced": 0.687488277787,
+          "absolute_difference": 0.0,
+          "tolerance": 3.937441388935e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.05286693133,
+          "reproduced": 1.05286693133,
+          "absolute_difference": 0.0,
+          "tolerance": 5.764334656650001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.881901144646,
+          "reproduced": 0.881901144646,
+          "absolute_difference": 0.0,
+          "tolerance": 4.909505723230001e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.687488277787,
+          "reproduced": 0.687488277787,
+          "absolute_difference": 0.0,
+          "tolerance": 3.937441388935e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.0636218673,
+          "reproduced": 1.0636218673,
+          "absolute_difference": 0.0,
+          "tolerance": 5.818109336500001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00339508744886,
+          "reproduced": 0.00339508744886,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1697543724430004e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00159323945831,
+          "reproduced": 0.00159323945831,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0796619729155e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00421091780736,
+          "reproduced": 0.00421091780736,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2105458903680004e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.431200433,
+          "reproduced": 0.431200433,
+          "absolute_difference": 0.0,
+          "tolerance": 2.656002165e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0204,
+          "reproduced": 0.0204,
+          "absolute_difference": 0.0,
+          "tolerance": 6.020000000000001e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00250778983008,
+          "reproduced": 0.00250778983008,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1253894915040005e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.296445243064,
+          "reproduced": 0.296445243064,
+          "absolute_difference": 0.0,
+          "tolerance": 1.9822262153200002e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.316845243064,
+          "reproduced": 0.316845243064,
+          "absolute_difference": 0.0,
+          "tolerance": 2.0842262153200002e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0254295089885,
+          "reproduced": 0.0254295089885,
+          "absolute_difference": 0.0,
+          "tolerance": 6.271475449425e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "scalar_m5p000_rep001_electron_likelihood",
+      "mass_GeV": 5.0,
+      "rep": 1,
+      "signal_type": "scalar",
+      "feature_set": "electron",
+      "method": "likelihood",
+      "profile": "h04",
+      "photon_xs_pb": 0.431200433,
+      "dis_xs_pb": "0.0204",
+      "seconds": 12.269447803497314,
+      "signature": "a6b2b69cee00f9f74ffdba721f82ce530dff4f4ec0f0fc0581bf27de2d346883",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron/likelihood/h04/metrics.csv": "7cb9f2e70ae6a1c0d9e4f12730b20ea5f694b5427f644066d1faa79d2413fdcc",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron/likelihood_selected.csv": "1b6d00f7f3740aedba041b06262610a807f48a596ce73957527b0a6baa5bd461",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron/likelihood/h04/dataset/weights/TMVAClassification_PDERS.weights.xml.gz": "204e96991e175d133d9d2175f1984429d707e9a05719bbd8117ee156ffcb5633",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/data/signal_validation.root": "328b1b87f350e55bfdc584f1660c9fb5b4e06841ae9041f6cb290b7a6dca6c36",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_001/m5p000/validation.root": "0ab628035a412c0110a59664a7e1570783d9675e6083283c20a24c6daa06b11b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_likelihood/original_model.xml": "4a70aa67391ecee02a5d399f15116f8395f2402d6d5f82dfddef951cddb5281b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_likelihood/validation_metrics.csv": "12c57973ac8bb0489933a7fe3ce2ade2b55e3aff461b6795948d6c16e85a8081",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_likelihood/command.json": "4bd30eb84e5c27237bbf481897e101a2e820066b47696b814813ec7b80716e27",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_likelihood/validation_signal_scores.csv": "54371b885254bca4133078109bdeee6c9379372866ce01eb82a8afebf8e9ddf6",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_likelihood/validation_photon_scores.csv": "21789da76a6d446045709e4f9024276a33195e8b14609682c09e08563199e9cb",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_likelihood/evaluation.log": "9b20b0fbeff74ba5353782cd52b9c000a28879b6e9e2b089c8b3be4aa87effc3"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 13401.0,
+          "reproduced": 13401.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 119356.0,
+          "reproduced": 119356.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.678356046321,
+          "reproduced": 0.678356046321,
+          "absolute_difference": 0.0,
+          "tolerance": 3.891780231605e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": 0.373810209528,
+          "reproduced": 0.373810209528,
+          "absolute_difference": 0.0,
+          "tolerance": 2.36905104764e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.852214139978,
+          "reproduced": 0.852214139978,
+          "absolute_difference": 0.0,
+          "tolerance": 4.76107069989e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.646167242028,
+          "reproduced": 0.646167242028,
+          "absolute_difference": 0.0,
+          "tolerance": 3.73083621014e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.04729800669,
+          "reproduced": 1.04729800669,
+          "absolute_difference": 0.0,
+          "tolerance": 5.736490033450001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.678356046321,
+          "reproduced": 0.678356046321,
+          "absolute_difference": 0.0,
+          "tolerance": 3.891780231605e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.852214139978,
+          "reproduced": 0.852214139978,
+          "absolute_difference": 0.0,
+          "tolerance": 4.76107069989e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.646167242028,
+          "reproduced": 0.646167242028,
+          "absolute_difference": 0.0,
+          "tolerance": 3.73083621014e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.04729800669,
+          "reproduced": 1.04729800669,
+          "absolute_difference": 0.0,
+          "tolerance": 5.736490033450001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.852214139978,
+          "reproduced": 0.852214139978,
+          "absolute_difference": 0.0,
+          "tolerance": 4.76107069989e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.646167242028,
+          "reproduced": 0.646167242028,
+          "absolute_difference": 0.0,
+          "tolerance": 3.73083621014e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.0601718465,
+          "reproduced": 1.0601718465,
+          "absolute_difference": 0.0,
+          "tolerance": 5.800859232500001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00373343829014,
+          "reproduced": 0.00373343829014,
+          "absolute_difference": 0.0,
+          "tolerance": 5.186671914507e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00164356443961,
+          "reproduced": 0.00164356443961,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0821782219805004e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00475296522299,
+          "reproduced": 0.00475296522299,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2376482611495e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.431200433,
+          "reproduced": 0.431200433,
+          "absolute_difference": 0.0,
+          "tolerance": 2.656002165e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0204,
+          "reproduced": 0.0204,
+          "absolute_difference": 0.0,
+          "tolerance": 6.020000000000001e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00242337133392,
+          "reproduced": 0.00242337133392,
+          "absolute_difference": 0.0,
+          "tolerance": 5.121168566696e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.278627594553,
+          "reproduced": 0.278627594553,
+          "absolute_difference": 0.0,
+          "tolerance": 1.8931379727650001e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.299027594553,
+          "reproduced": 0.299027594553,
+          "absolute_difference": 0.0,
+          "tolerance": 1.9951379727650001e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0228418434496,
+          "reproduced": 0.0228418434496,
+          "absolute_difference": 0.0,
+          "tolerance": 6.14209217248e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "scalar_m5p000_rep001_electron_qa2_bdt",
+      "mass_GeV": 5.0,
+      "rep": 1,
+      "signal_type": "scalar",
+      "feature_set": "electron_qa2",
+      "method": "bdt",
+      "profile": "depth3_800",
+      "photon_xs_pb": 0.431200433,
+      "dis_xs_pb": "0.0204",
+      "seconds": 4.037652969360352,
+      "signature": "9d6325b4c599fbc86d316eaca60f362858abb77fdb2b51702d2157c15b3867f8",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron_qa2/bdt/depth3_800/metrics.csv": "60aed50ff85bf6680753b850218677ac9f6735f2f9009856e43e4030aafbda68",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron_qa2/bdt_selected.csv": "22c8a8938edc9793d267195be8caab4a1c5c7311858ac0704914526df0184232",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron_qa2/bdt/depth3_800/dataset/weights/TMVAClassification_BDTG.weights.xml.gz": "d83812bc2b01bc6ac8a19c086ece5b0ef173dca251d9a91245e53cced1a6688f",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/data/signal_validation.root": "328b1b87f350e55bfdc584f1660c9fb5b4e06841ae9041f6cb290b7a6dca6c36",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_001/m5p000/validation.root": "0ab628035a412c0110a59664a7e1570783d9675e6083283c20a24c6daa06b11b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_bdt/original_model.xml": "68ffc42114fa9c91cc0f6e10d7d73d4a30bb718334899045ba054453ec3e3765",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_bdt/validation_metrics.csv": "328aad6095a72cd8e4d16f10d00a86a298f01bf8f961ca0df26b6a47f1939dae",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_bdt/command.json": "1514081c7ad56ed420e953d7218b1b3c7b5c1c8339d6b07239ef75a607958803",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_bdt/validation_signal_scores.csv": "3db99b31686cc8417cb62ab79581b4130db748f0f0a1e24f578d836875fec1f2",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_bdt/validation_photon_scores.csv": "fa25cf5cef805ae4e5fbb198ee06047ef66785612d5e2c4124aaa2a22f440d29",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_bdt/evaluation.log": "5c6a035ab1dcd2c46e6e569e4f86b09873edbf643940b32be3a8cc0e51390596"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 13401.0,
+          "reproduced": 13401.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 119356.0,
+          "reproduced": 119356.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.739699648244,
+          "reproduced": 0.739699648244,
+          "absolute_difference": 0.0,
+          "tolerance": 4.1984982412200005e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": -0.174507126072,
+          "reproduced": -0.174507126072,
+          "absolute_difference": 0.0,
+          "tolerance": 1.37253563036e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.895926370309,
+          "reproduced": 0.895926370309,
+          "absolute_difference": 0.0,
+          "tolerance": 4.979631851545e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.570676262496,
+          "reproduced": 0.570676262496,
+          "absolute_difference": 0.0,
+          "tolerance": 3.35338131248e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.16632763286,
+          "reproduced": 1.16632763286,
+          "absolute_difference": 0.0,
+          "tolerance": 6.331638164300001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.739699648244,
+          "reproduced": 0.739699648244,
+          "absolute_difference": 0.0,
+          "tolerance": 4.1984982412200005e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.895926370309,
+          "reproduced": 0.895926370309,
+          "absolute_difference": 0.0,
+          "tolerance": 4.979631851545e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.570676262496,
+          "reproduced": 0.570676262496,
+          "absolute_difference": 0.0,
+          "tolerance": 3.35338131248e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.16632763286,
+          "reproduced": 1.16632763286,
+          "absolute_difference": 0.0,
+          "tolerance": 6.331638164300001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.895926370309,
+          "reproduced": 0.895926370309,
+          "absolute_difference": 0.0,
+          "tolerance": 4.979631851545e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.570676262496,
+          "reproduced": 0.570676262496,
+          "absolute_difference": 0.0,
+          "tolerance": 3.35338131248e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.18598013707,
+          "reproduced": 1.18598013707,
+          "absolute_difference": 0.0,
+          "tolerance": 6.429900685350001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00321236346752,
+          "reproduced": 0.00321236346752,
+          "absolute_difference": 0.0,
+          "tolerance": 5.160618173376e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00170138501591,
+          "reproduced": 0.00170138501591,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0850692507955e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00447949881887,
+          "reproduced": 0.00447949881887,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2239749409435e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.431200433,
+          "reproduced": 0.431200433,
+          "absolute_difference": 0.0,
+          "tolerance": 2.656002165e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0204,
+          "reproduced": 0.0204,
+          "absolute_difference": 0.0,
+          "tolerance": 6.020000000000001e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00254767221201,
+          "reproduced": 0.00254767221201,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1273836106005004e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.246075851491,
+          "reproduced": 0.246075851491,
+          "absolute_difference": 0.0,
+          "tolerance": 1.730379257455e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.266475851491,
+          "reproduced": 0.266475851491,
+          "absolute_difference": 0.0,
+          "tolerance": 1.832379257455e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0740453490517,
+          "reproduced": 0.0740453490517,
+          "absolute_difference": 0.0,
+          "tolerance": 8.702267452585e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "scalar_m5p000_rep001_electron_qa2_likelihood",
+      "mass_GeV": 5.0,
+      "rep": 1,
+      "signal_type": "scalar",
+      "feature_set": "electron_qa2",
+      "method": "likelihood",
+      "profile": "h08",
+      "photon_xs_pb": 0.431200433,
+      "dis_xs_pb": "0.0204",
+      "seconds": 16.094942331314087,
+      "signature": "c7d4f93eba2742ad22c537cb438767014f4e8c508b1cd7202d854f7ba430a6db",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron_qa2/likelihood/h08/metrics.csv": "5bd4ea4a3e693dadfcb2e535dc8afe535a0eee01945586400dd79e672c41c900",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron_qa2/likelihood_selected.csv": "322bfdea1ce296f4419b29411cf2afc88f07b15ea5b30210a525f87dbcf9d4d2",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/electron_qa2/likelihood/h08/dataset/weights/TMVAClassification_PDERS.weights.xml.gz": "886bf5cafb4c5ebe3dad6aaf6d0da67f782a41721d6e5244182b1f215c8ac3d4",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/scalar_m5p000/data/signal_validation.root": "328b1b87f350e55bfdc584f1660c9fb5b4e06841ae9041f6cb290b7a6dca6c36",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_001/m5p000/validation.root": "0ab628035a412c0110a59664a7e1570783d9675e6083283c20a24c6daa06b11b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_likelihood/original_model.xml": "4ac7efae500a48baba244ce922d3418b14f211e95452db6553e328e4dbe4504e",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_likelihood/validation_metrics.csv": "8def104fbdbd15c65ddcf7acc7f72ad9964a262202b201ce47f25942a8d40f09",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_likelihood/command.json": "f488938ccf54d350502cb16243395dee047b8ad85be465c544711a14bd965e14",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_likelihood/validation_signal_scores.csv": "886636d5e53cec92ef0be191c21db699cb6693b6bbb7d995670293ab5f1b082d",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_likelihood/validation_photon_scores.csv": "d3f7d4939749cf791e86c238179a6dd85f32ddc46057477fffb2a059ecf7f991",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m5p000_rep001_electron_qa2_likelihood/evaluation.log": "46a99dff9f58dc2ce792ec3d6e6212d88cb60eee294874724874cc216f48dfa9"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 13401.0,
+          "reproduced": 13401.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 119356.0,
+          "reproduced": 119356.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.738363655731,
+          "reproduced": 0.738363655731,
+          "absolute_difference": 0.0,
+          "tolerance": 4.191818278655e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": 0.453105103312,
+          "reproduced": 0.453105103312,
+          "absolute_difference": 0.0,
+          "tolerance": 2.76552551656e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.843138089752,
+          "reproduced": 0.843138089752,
+          "absolute_difference": 0.0,
+          "tolerance": 4.71569044876e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.507228975605,
+          "reproduced": 0.507228975605,
+          "absolute_difference": 0.0,
+          "tolerance": 3.036144878025e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.1586982106,
+          "reproduced": 1.1586982106,
+          "absolute_difference": 0.0,
+          "tolerance": 6.293491053000001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.738363655731,
+          "reproduced": 0.738363655731,
+          "absolute_difference": 0.0,
+          "tolerance": 4.191818278655e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.843138089752,
+          "reproduced": 0.843138089752,
+          "absolute_difference": 0.0,
+          "tolerance": 4.71569044876e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.507228975605,
+          "reproduced": 0.507228975605,
+          "absolute_difference": 0.0,
+          "tolerance": 3.036144878025e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.1586982106,
+          "reproduced": 1.1586982106,
+          "absolute_difference": 0.0,
+          "tolerance": 6.293491053000001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.843138089752,
+          "reproduced": 0.843138089752,
+          "absolute_difference": 0.0,
+          "tolerance": 4.71569044876e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.507228975605,
+          "reproduced": 0.507228975605,
+          "absolute_difference": 0.0,
+          "tolerance": 3.036144878025e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.1838500099,
+          "reproduced": 1.1838500099,
+          "absolute_difference": 0.0,
+          "tolerance": 6.419250049500001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00382583532038,
+          "reproduced": 0.00382583532038,
+          "absolute_difference": 0.0,
+          "tolerance": 5.191291766019e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00171846170108,
+          "reproduced": 0.00171846170108,
+          "absolute_difference": 0.0,
+          "tolerance": 5.085923085054e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00555580286451,
+          "reproduced": 0.00555580286451,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2777901432255004e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.431200433,
+          "reproduced": 0.431200433,
+          "absolute_difference": 0.0,
+          "tolerance": 2.656002165e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0204,
+          "reproduced": 0.0204,
+          "absolute_difference": 0.0,
+          "tolerance": 6.020000000000001e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00239756251556,
+          "reproduced": 0.00239756251556,
+          "absolute_difference": 0.0,
+          "tolerance": 5.119878125778e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.218717353911,
+          "reproduced": 0.218717353911,
+          "absolute_difference": 0.0,
+          "tolerance": 1.5935867695550002e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.239117353911,
+          "reproduced": 0.239117353911,
+          "absolute_difference": 0.0,
+          "tolerance": 1.6955867695550002e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0710018869657,
+          "reproduced": 0.0710018869657,
+          "absolute_difference": 0.0,
+          "tolerance": 8.550094348285001e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "scalar_m6p310_rep004_electron_bdt",
+      "mass_GeV": 6.31,
+      "rep": 4,
+      "signal_type": "scalar",
+      "feature_set": "electron",
+      "method": "bdt",
+      "profile": "depth2",
+      "photon_xs_pb": 0.35174984,
+      "dis_xs_pb": "0.0155",
+      "seconds": 1.7226979732513428,
+      "signature": "d19569e29d1311cdfbac3ffde9791fcafa59433113937fa534967c39034b72a7",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron/bdt/depth2/metrics.csv": "7db3791e166aaf6f5cc53bb5f79743577eeb9c51b8d0a8040740ac65491591f4",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron/bdt_selected.csv": "866e5221382441a8f907cc05c0f486b3c211fe811f86444a7fa64804144d9910",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron/bdt/depth2/dataset/weights/TMVAClassification_BDTG.weights.xml.gz": "230a8ce6685b825ef4765f1cdab17afee65834fc4efdc16d2f7db57c1c1f5989",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/data/signal_validation.root": "3106709d42a9e39ec33b8a9ece9dd1f16763d5b417f742d9e060f4939bd0dd8a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_004/m6p310/validation.root": "cd7031ec03ce5340a56d306fa0a5f061cab4df6cec3ee127fe61d921963e8a11",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_bdt/original_model.xml": "913ae46847af301ac3a0e582cf617be69a9c09b9d46034afe4dc9b0335463b7e",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_bdt/validation_metrics.csv": "95596fcefdb8d827a4d30c466a03f46edc7b7a5627f88a0df871827f77f47fd3",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_bdt/command.json": "4cd4f0ad3881c527ec142bd440dc7200fdeb4c22c3dc72b2aaab97c1cbae01ed",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_bdt/validation_signal_scores.csv": "ea5e9415e801a18bd172ac64f84271681724feafdd4182e21f629dd163a61ef0",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_bdt/validation_photon_scores.csv": "3f71ce25e0790c864091cfe946224cc43d5f40df6aa5e1521052b36473c395c1",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_bdt/evaluation.log": "3b81d14d68672b9fa27523b0456f6490d4d37a2e88e9b850e4736373f0e2d193"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 14508.0,
+          "reproduced": 14508.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 118959.0,
+          "reproduced": 118959.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.682803425173,
+          "reproduced": 0.682803425173,
+          "absolute_difference": 0.0,
+          "tolerance": 3.9140171258649997e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": -0.173668955967,
+          "reproduced": -0.173668955967,
+          "absolute_difference": 0.0,
+          "tolerance": 1.3683447798350002e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.823406006195,
+          "reproduced": 0.823406006195,
+          "absolute_difference": 0.0,
+          "tolerance": 4.617030030975e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.596390819114,
+          "reproduced": 0.596390819114,
+          "absolute_difference": 0.0,
+          "tolerance": 3.4819540955700003e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.05131571871,
+          "reproduced": 1.05131571871,
+          "absolute_difference": 0.0,
+          "tolerance": 5.756578593550001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.682803425173,
+          "reproduced": 0.682803425173,
+          "absolute_difference": 0.0,
+          "tolerance": 3.9140171258649997e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.823406006195,
+          "reproduced": 0.823406006195,
+          "absolute_difference": 0.0,
+          "tolerance": 4.617030030975e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.596390819114,
+          "reproduced": 0.596390819114,
+          "absolute_difference": 0.0,
+          "tolerance": 3.4819540955700003e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.05131571871,
+          "reproduced": 1.05131571871,
+          "absolute_difference": 0.0,
+          "tolerance": 5.756578593550001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.823406006195,
+          "reproduced": 0.823406006195,
+          "absolute_difference": 0.0,
+          "tolerance": 4.617030030975e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.596390819114,
+          "reproduced": 0.596390819114,
+          "absolute_difference": 0.0,
+          "tolerance": 3.4819540955700003e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.06622425028,
+          "reproduced": 1.06622425028,
+          "absolute_difference": 0.0,
+          "tolerance": 5.8311212514e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00382612510576,
+          "reproduced": 0.00382612510576,
+          "absolute_difference": 0.0,
+          "tolerance": 5.191306255288e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00174477015972,
+          "reproduced": 0.00174477015972,
+          "absolute_difference": 0.0,
+          "tolerance": 5.087238507986e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00509072112939,
+          "reproduced": 0.00509072112939,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2545360564695e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.35174984,
+          "reproduced": 0.35174984,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2587492000000001e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0155,
+          "reproduced": 0.0155,
+          "absolute_difference": 0.0,
+          "tolerance": 5.775e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00126939200293,
+          "reproduced": 0.00126939200293,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0634696001465e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.209780375201,
+          "reproduced": 0.209780375201,
+          "absolute_difference": 0.0,
+          "tolerance": 1.5489018760050002e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.225280375201,
+          "reproduced": 0.225280375201,
+          "absolute_difference": 0.0,
+          "tolerance": 1.6264018760050002e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0247107863515,
+          "reproduced": 0.0247107863515,
+          "absolute_difference": 0.0,
+          "tolerance": 6.235539317575e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "scalar_m6p310_rep004_electron_likelihood",
+      "mass_GeV": 6.31,
+      "rep": 4,
+      "signal_type": "scalar",
+      "feature_set": "electron",
+      "method": "likelihood",
+      "profile": "h08",
+      "photon_xs_pb": 0.35174984,
+      "dis_xs_pb": "0.0155",
+      "seconds": 22.924965143203735,
+      "signature": "a669ddea4041d7c41206176fd16eaf8fe117b8e46fb293d69f380bf879b55a99",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron/likelihood/h08/metrics.csv": "7795b549d5096b7fc1419e8f87fc9c6db802c72925d562c3d76508467b3b1858",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron/likelihood_selected.csv": "555228ac7937b5ba2f4a008f338d2428b9def13d6f4a67416290e768c905852c",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron/likelihood/h08/dataset/weights/TMVAClassification_PDERS.weights.xml.gz": "1e066faad630916f354669aa61b52cedd177fdaf079b02a57343511f6932786b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/data/signal_validation.root": "3106709d42a9e39ec33b8a9ece9dd1f16763d5b417f742d9e060f4939bd0dd8a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_004/m6p310/validation.root": "cd7031ec03ce5340a56d306fa0a5f061cab4df6cec3ee127fe61d921963e8a11",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_likelihood/original_model.xml": "2a7cea5c78f8149a11816f66ee0f373efb0b718b8288aeb08e3372e5f0542be2",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_likelihood/validation_metrics.csv": "36f0a5982d7435877b88511e411cdf7a2acdcd62a7747938f39203566f83f797",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_likelihood/command.json": "3ce9567129035a60fc5616a066eddeaf4da83bc9fb76c4b7f9773fd866227d02",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_likelihood/validation_signal_scores.csv": "88870edbe7ecb4cf569494df1100e843a932c3002eaa45f2bcf27b7f101a56fe",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_likelihood/validation_photon_scores.csv": "e2543dac2e8ee2d502bc0a379de6147d136f205205563da92347ded70962e37b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_likelihood/evaluation.log": "abc9b1d08661cccd4268bec0879f044fc2502625c20472d4dea3aa13c3bef952"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 14508.0,
+          "reproduced": 14508.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 118959.0,
+          "reproduced": 118959.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.68218209945,
+          "reproduced": 0.68218209945,
+          "absolute_difference": 0.0,
+          "tolerance": 3.91091049725e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": 0.358862609474,
+          "reproduced": 0.358862609474,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2943130473700002e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.939457281933,
+          "reproduced": 0.939457281933,
+          "absolute_difference": 0.0,
+          "tolerance": 5.197286409665001e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.788033342586,
+          "reproduced": 0.788033342586,
+          "absolute_difference": 0.0,
+          "tolerance": 4.44016671293e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.0523336446,
+          "reproduced": 1.0523336446,
+          "absolute_difference": 0.0,
+          "tolerance": 5.761668223000001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.68218209945,
+          "reproduced": 0.68218209945,
+          "absolute_difference": 0.0,
+          "tolerance": 3.91091049725e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.939457281933,
+          "reproduced": 0.939457281933,
+          "absolute_difference": 0.0,
+          "tolerance": 5.197286409665001e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.788033342586,
+          "reproduced": 0.788033342586,
+          "absolute_difference": 0.0,
+          "tolerance": 4.44016671293e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.0523336446,
+          "reproduced": 1.0523336446,
+          "absolute_difference": 0.0,
+          "tolerance": 5.761668223000001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.939457281933,
+          "reproduced": 0.939457281933,
+          "absolute_difference": 0.0,
+          "tolerance": 5.197286409665001e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.788033342586,
+          "reproduced": 0.788033342586,
+          "absolute_difference": 0.0,
+          "tolerance": 4.44016671293e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.05829011693,
+          "reproduced": 1.05829011693,
+          "absolute_difference": 0.0,
+          "tolerance": 5.791450584650001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00239295021199,
+          "reproduced": 0.00239295021199,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1196475105995004e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00145344400344,
+          "reproduced": 0.00145344400344,
+          "absolute_difference": 0.0,
+          "tolerance": 5.072672200172e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00283365024583,
+          "reproduced": 0.00283365024583,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1416825122915004e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.35174984,
+          "reproduced": 0.35174984,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2587492000000001e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0155,
+          "reproduced": 0.0155,
+          "absolute_difference": 0.0,
+          "tolerance": 5.775e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.0014483007797,
+          "reproduced": 0.0014483007797,
+          "absolute_difference": 0.0,
+          "tolerance": 5.072415038985e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.277190602169,
+          "reproduced": 0.277190602169,
+          "absolute_difference": 0.0,
+          "tolerance": 1.885953010845e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.292690602169,
+          "reproduced": 0.292690602169,
+          "absolute_difference": 0.0,
+          "tolerance": 1.963453010845e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.025182600751,
+          "reproduced": 0.025182600751,
+          "absolute_difference": 0.0,
+          "tolerance": 6.25913003755e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "scalar_m6p310_rep004_electron_qa2_bdt",
+      "mass_GeV": 6.31,
+      "rep": 4,
+      "signal_type": "scalar",
+      "feature_set": "electron_qa2",
+      "method": "bdt",
+      "profile": "depth2",
+      "photon_xs_pb": 0.35174984,
+      "dis_xs_pb": "0.0155",
+      "seconds": 1.8551011085510254,
+      "signature": "519eaf82df237eede5f631699ee4fe73017f15960ad9995aa07340ff9e65340f",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron_qa2/bdt/depth2/metrics.csv": "470e88b5af0fe3c236963a14d40d86e868c041bd9d487a3a31584c2d11d7f888",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron_qa2/bdt_selected.csv": "fda02cd7a735f0cf99e0aecec4f1f39c8584d51b0b49df52abef39ebdfaefac6",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron_qa2/bdt/depth2/dataset/weights/TMVAClassification_BDTG.weights.xml.gz": "881c57af3ce63c90b99869cad97df9a5a1fb653f801fbd984a48a401450d7ca6",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/data/signal_validation.root": "3106709d42a9e39ec33b8a9ece9dd1f16763d5b417f742d9e060f4939bd0dd8a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_004/m6p310/validation.root": "cd7031ec03ce5340a56d306fa0a5f061cab4df6cec3ee127fe61d921963e8a11",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_bdt/original_model.xml": "39f8ff6ad05df988f287de753844020215df90c47df2588722e57239fa343ba5",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_bdt/validation_metrics.csv": "508de945d19a819f8a85f413263c3c67d03d2d17d846790fc264ba6568c94d0b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_bdt/command.json": "56365f08f3776fc46b8e6cd026705ec958f59a7dee3c1f285336f3c802a1dac0",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_bdt/validation_signal_scores.csv": "5b1f4f3748832fdfa2a6b4da954d6afeee168c3a600588e30dc8fa75f17f74c3",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_bdt/validation_photon_scores.csv": "23a7ac457fcfdb31717294e0f3aac37bcf1fe92462aba238570f7992278dc690",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_bdt/evaluation.log": "02b3d7d148e4dace90ba2d0ea019c46bdf5be18fd0505ea96660d93af7b1053e"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 14508.0,
+          "reproduced": 14508.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 118959.0,
+          "reproduced": 118959.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.756918742997,
+          "reproduced": 0.756918742997,
+          "absolute_difference": 0.0,
+          "tolerance": 4.284593714985e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": -0.127271125837,
+          "reproduced": -0.127271125837,
+          "absolute_difference": 0.0,
+          "tolerance": 1.136355629185e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.907417019831,
+          "reproduced": 0.907417019831,
+          "absolute_difference": 0.0,
+          "tolerance": 5.037085099155001e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.554411516918,
+          "reproduced": 0.554411516918,
+          "absolute_difference": 0.0,
+          "tolerance": 3.27205758459e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.19852492224,
+          "reproduced": 1.19852492224,
+          "absolute_difference": 0.0,
+          "tolerance": 6.492624611200001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.756918742997,
+          "reproduced": 0.756918742997,
+          "absolute_difference": 0.0,
+          "tolerance": 4.284593714985e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.907417019831,
+          "reproduced": 0.907417019831,
+          "absolute_difference": 0.0,
+          "tolerance": 5.037085099155001e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.554411516918,
+          "reproduced": 0.554411516918,
+          "absolute_difference": 0.0,
+          "tolerance": 3.27205758459e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.19852492224,
+          "reproduced": 1.19852492224,
+          "absolute_difference": 0.0,
+          "tolerance": 6.492624611200001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.907417019831,
+          "reproduced": 0.907417019831,
+          "absolute_difference": 0.0,
+          "tolerance": 5.037085099155001e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.554411516918,
+          "reproduced": 0.554411516918,
+          "absolute_difference": 0.0,
+          "tolerance": 3.27205758459e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.21868312936,
+          "reproduced": 1.21868312936,
+          "absolute_difference": 0.0,
+          "tolerance": 6.593415646800001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00290825996825,
+          "reproduced": 0.00290825996825,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1454129984125e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00176756475197,
+          "reproduced": 0.00176756475197,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0883782375985004e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00422939098635,
+          "reproduced": 0.00422939098635,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2114695493175005e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.35174984,
+          "reproduced": 0.35174984,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2587492000000001e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0155,
+          "reproduced": 0.0155,
+          "absolute_difference": 0.0,
+          "tolerance": 5.775e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00139890637138,
+          "reproduced": 0.00139890637138,
+          "absolute_difference": 0.0,
+          "tolerance": 5.069945318569e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.19501416237,
+          "reproduced": 0.19501416237,
+          "absolute_difference": 0.0,
+          "tolerance": 1.47507081185e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.21051416237,
+          "reproduced": 0.21051416237,
+          "absolute_difference": 0.0,
+          "tolerance": 1.55257081185e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0865674881991,
+          "reproduced": 0.0865674881991,
+          "absolute_difference": 0.0,
+          "tolerance": 9.328374409955e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "scalar_m6p310_rep004_electron_qa2_likelihood",
+      "mass_GeV": 6.31,
+      "rep": 4,
+      "signal_type": "scalar",
+      "feature_set": "electron_qa2",
+      "method": "likelihood",
+      "profile": "h08",
+      "photon_xs_pb": 0.35174984,
+      "dis_xs_pb": "0.0155",
+      "seconds": 12.098514080047607,
+      "signature": "f5dab72e8e42d8c1ad800c619d0483b7adf8fd64feea022bb4470fb8737a216e",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron_qa2/likelihood/h08/metrics.csv": "01cd388d7ce6c380050e1e9c823f3cb28d8a102c077598b9baca4d5e2f7a4d6c",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron_qa2/likelihood_selected.csv": "a34647d0d3c33219c5205c8a63b3aa3c2d90ea37b151e8b761eafadf1f8bcbda",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/electron_qa2/likelihood/h08/dataset/weights/TMVAClassification_PDERS.weights.xml.gz": "e7e7f1a5870d5a6a9c4ce7813502c214e6bda71f54efaa5248e6bf5394e711d2",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/scalar_m6p310/data/signal_validation.root": "3106709d42a9e39ec33b8a9ece9dd1f16763d5b417f742d9e060f4939bd0dd8a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_004/m6p310/validation.root": "cd7031ec03ce5340a56d306fa0a5f061cab4df6cec3ee127fe61d921963e8a11",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_likelihood/original_model.xml": "942abc8d2c86e8be0d6a4a9b75d43bf5841c1aa29e27a2d187bed6e3712c954a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_likelihood/validation_metrics.csv": "a28b29fc6ad615fce753ded8070cf6a0849e17d9840a35ff9427dd6ee9a9b600",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_likelihood/command.json": "f9a2e21e5fc7f77c62f78803a3778eac5b2ea2777e30d85607208a02c0373eb6",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_likelihood/validation_signal_scores.csv": "6ac05e56c6be3281c01e48208b145a6ef6df143450bd46925230a55eb0cde190",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_likelihood/validation_photon_scores.csv": "a02110588434b9c3da31a543c6c93d3a8d6c01dab1fd08bdc2f631742e99ab25",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/scalar_m6p310_rep004_electron_qa2_likelihood/evaluation.log": "e1624bad80183cc8f7100301cafa3a03a2f39a9ad623cdb252856522cc7d8c8f"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 14508.0,
+          "reproduced": 14508.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 118959.0,
+          "reproduced": 118959.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.75717779499,
+          "reproduced": 0.75717779499,
+          "absolute_difference": 0.0,
+          "tolerance": 4.28588897495e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": 0.45620266112,
+          "reproduced": 0.45620266112,
+          "absolute_difference": 0.0,
+          "tolerance": 2.7810133056e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.899332508131,
+          "reproduced": 0.899332508131,
+          "absolute_difference": 0.0,
+          "tolerance": 4.996662540655e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.541927440325,
+          "reproduced": 0.541927440325,
+          "absolute_difference": 0.0,
+          "tolerance": 3.2096372016249997e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.20043317166,
+          "reproduced": 1.20043317166,
+          "absolute_difference": 0.0,
+          "tolerance": 6.502165858300001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.75717779499,
+          "reproduced": 0.75717779499,
+          "absolute_difference": 0.0,
+          "tolerance": 4.28588897495e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.899332508131,
+          "reproduced": 0.899332508131,
+          "absolute_difference": 0.0,
+          "tolerance": 4.996662540655e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.541927440325,
+          "reproduced": 0.541927440325,
+          "absolute_difference": 0.0,
+          "tolerance": 3.2096372016249997e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.20043317166,
+          "reproduced": 1.20043317166,
+          "absolute_difference": 0.0,
+          "tolerance": 6.502165858300001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.899332508131,
+          "reproduced": 0.899332508131,
+          "absolute_difference": 0.0,
+          "tolerance": 4.996662540655e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.541927440325,
+          "reproduced": 0.541927440325,
+          "absolute_difference": 0.0,
+          "tolerance": 3.2096372016249997e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.22165821899,
+          "reproduced": 1.22165821899,
+          "absolute_difference": 0.0,
+          "tolerance": 6.608291094950001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00301904062491,
+          "reproduced": 0.00301904062491,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1509520312455003e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00177186219252,
+          "reproduced": 0.00177186219252,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0885931096260005e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.0044196469266,
+          "reproduced": 0.0044196469266,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2209823463300004e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.35174984,
+          "reproduced": 0.35174984,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2587492000000001e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0155,
+          "reproduced": 0.0155,
+          "absolute_difference": 0.0,
+          "tolerance": 5.775e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00138644300043,
+          "reproduced": 0.00138644300043,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0693221500215e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.190622890426,
+          "reproduced": 0.190622890426,
+          "absolute_difference": 0.0,
+          "tolerance": 1.45311445213e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.206122890426,
+          "reproduced": 0.206122890426,
+          "absolute_difference": 0.0,
+          "tolerance": 1.53061445213e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0872937886566,
+          "reproduced": 0.0872937886566,
+          "absolute_difference": 0.0,
+          "tolerance": 9.364689432830001e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "vector_m5p000_rep001_electron_bdt",
+      "mass_GeV": 5.0,
+      "rep": 1,
+      "signal_type": "vector",
+      "feature_set": "electron",
+      "method": "bdt",
+      "profile": "depth3",
+      "photon_xs_pb": 0.431200433,
+      "dis_xs_pb": "0.0204",
+      "seconds": 3.2815651893615723,
+      "signature": "921a26e150784f6658d8920c8743c782863eb925cb8a3b51d986e72ee6251610",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron/bdt/depth3/metrics.csv": "de31c96a307a6db8b0309ca261b719c5de9f9f620bacdc842d3d690e408329bf",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron/bdt_selected.csv": "06b79e6867aab09e56028483708efc3804ebb8142200ba9077b11c75e4fc9982",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron/bdt/depth3/dataset/weights/TMVAClassification_BDTG.weights.xml.gz": "0d04d1c6edd05731eac34c9dfe71b95055cb001b7c311f2ea1507889cb63b9d6",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/data/signal_validation.root": "51362f4998b32a090e5c6e65a62111fa5ec54807ca1e84e952483ff0702ba13d",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_001/m5p000/validation.root": "0ab628035a412c0110a59664a7e1570783d9675e6083283c20a24c6daa06b11b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_bdt/original_model.xml": "b6f24922a1e5d078ba090a93ec5c5f2561620699fcdbb513ab8d41913ba42b38",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_bdt/validation_metrics.csv": "f5a1dcef11c329c20d2bf12b50a1680778a3d6a6d0f91aa40d95241344fccda5",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_bdt/command.json": "d27ec518f967845a27d7db7350baea3c3f574a5ba24c2f3af76e26693eef78c1",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_bdt/validation_signal_scores.csv": "9c5c94f9d9ad8f6c8d10e534c322c733cb872bf99baaff55fe3885a4ddffbfb2",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_bdt/validation_photon_scores.csv": "658241ff87b2b5a09b2600699fac823ca40c78b79d774d5dabd1da5bbe0ea106",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_bdt/evaluation.log": "3319a1a8172ec15f41ff59a3c00c703e97a90a306198245c62b3ec5c8034a5d6"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 14202.0,
+          "reproduced": 14202.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 119356.0,
+          "reproduced": 119356.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.640829939794,
+          "reproduced": 0.640829939794,
+          "absolute_difference": 0.0,
+          "tolerance": 3.70414969897e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": -0.438953391511,
+          "reproduced": -0.438953391511,
+          "absolute_difference": 0.0,
+          "tolerance": 2.694766957555e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.975288300554,
+          "reproduced": 0.975288300554,
+          "absolute_difference": 0.0,
+          "tolerance": 5.37644150277e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.892199692364,
+          "reproduced": 0.892199692364,
+          "absolute_difference": 0.0,
+          "tolerance": 4.960998461820001e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.02972204935,
+          "reproduced": 1.02972204935,
+          "absolute_difference": 0.0,
+          "tolerance": 5.64861024675e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.640829939794,
+          "reproduced": 0.640829939794,
+          "absolute_difference": 0.0,
+          "tolerance": 3.70414969897e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.975288300554,
+          "reproduced": 0.975288300554,
+          "absolute_difference": 0.0,
+          "tolerance": 5.37644150277e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.892199692364,
+          "reproduced": 0.892199692364,
+          "absolute_difference": 0.0,
+          "tolerance": 4.960998461820001e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.02972204935,
+          "reproduced": 1.02972204935,
+          "absolute_difference": 0.0,
+          "tolerance": 5.64861024675e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.975288300554,
+          "reproduced": 0.975288300554,
+          "absolute_difference": 0.0,
+          "tolerance": 5.37644150277e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.892199692364,
+          "reproduced": 0.892199692364,
+          "absolute_difference": 0.0,
+          "tolerance": 4.960998461820001e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.03252833826,
+          "reproduced": 1.03252833826,
+          "absolute_difference": 0.0,
+          "tolerance": 5.6626416913e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00146824953572,
+          "reproduced": 0.00146824953572,
+          "absolute_difference": 0.0,
+          "tolerance": 5.073412476786e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00106599773881,
+          "reproduced": 0.00106599773881,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0532998869405e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00165661532389,
+          "reproduced": 0.00165661532389,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0828307661945e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.431200433,
+          "reproduced": 0.431200433,
+          "absolute_difference": 0.0,
+          "tolerance": 2.656002165e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0204,
+          "reproduced": 0.0204,
+          "absolute_difference": 0.0,
+          "tolerance": 6.020000000000001e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00893050401331,
+          "reproduced": 0.00893050401331,
+          "absolute_difference": 0.0,
+          "tolerance": 5.4465252006655004e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.38471689367,
+          "reproduced": 0.38471689367,
+          "absolute_difference": 0.0,
+          "tolerance": 2.4235844683500003e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.40511689367,
+          "reproduced": 0.40511689367,
+          "absolute_difference": 0.0,
+          "tolerance": 2.52558446835e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0145377469056,
+          "reproduced": 0.0145377469056,
+          "absolute_difference": 0.0,
+          "tolerance": 5.72688734528e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "vector_m5p000_rep001_electron_likelihood",
+      "mass_GeV": 5.0,
+      "rep": 1,
+      "signal_type": "vector",
+      "feature_set": "electron",
+      "method": "likelihood",
+      "profile": "h04",
+      "photon_xs_pb": 0.431200433,
+      "dis_xs_pb": "0.0204",
+      "seconds": 12.629815101623535,
+      "signature": "3968c5d960d7238aca5f29123c3935323880789100393eadd2d0b27294fd9c22",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron/likelihood/h04/metrics.csv": "abbf8211da9738ff073c90e5e62ef0ba8c3cd7fd27ca45765befd34feefd6457",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron/likelihood_selected.csv": "d775eeaaadfa819073659259f1d43bdf3fb857393a80b83b2e7d49ad57fedd1f",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron/likelihood/h04/dataset/weights/TMVAClassification_PDERS.weights.xml.gz": "15fa32cc0d544a75ae1998ea98b437bd921a7aeb83e2fb7e7c968e9a31ed5632",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/data/signal_validation.root": "51362f4998b32a090e5c6e65a62111fa5ec54807ca1e84e952483ff0702ba13d",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_001/m5p000/validation.root": "0ab628035a412c0110a59664a7e1570783d9675e6083283c20a24c6daa06b11b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_likelihood/original_model.xml": "9fefe161b56e07744ab5b67b18e336fc9b98c927319b764e1ce70037225cb9b9",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_likelihood/validation_metrics.csv": "da3e9e349fc9d17130a3c6dab1bc97a41618045eed731df94f9d0d77797d544a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_likelihood/command.json": "3c4cb2981d1baaa1c83b87f848c980b9871f836e7a41449408036523d9a0f58b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_likelihood/validation_signal_scores.csv": "73faec5fa90962347c02cedd91093b750eb8e81b742affdb5989fb908731174b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_likelihood/validation_photon_scores.csv": "23a18455500ce2624580bab6186838c519aa598343b507ffab4f955c41c7fd38",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_likelihood/evaluation.log": "578c1117745ff89719d0fbb58c99e5abc872933bd6e11500f20485a0028a15f3"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 14202.0,
+          "reproduced": 14202.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 119356.0,
+          "reproduced": 119356.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.637217058798,
+          "reproduced": 0.637217058798,
+          "absolute_difference": 0.0,
+          "tolerance": 3.68608529399e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": 0.312414337155,
+          "reproduced": 0.312414337155,
+          "absolute_difference": 0.0,
+          "tolerance": 2.0620716857750002e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.959181098279,
+          "reproduced": 0.959181098279,
+          "absolute_difference": 0.0,
+          "tolerance": 5.295905491395e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.870167226741,
+          "reproduced": 0.870167226741,
+          "absolute_difference": 0.0,
+          "tolerance": 4.850836133705e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.02480349247,
+          "reproduced": 1.02480349247,
+          "absolute_difference": 0.0,
+          "tolerance": 5.62401746235e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.637217058798,
+          "reproduced": 0.637217058798,
+          "absolute_difference": 0.0,
+          "tolerance": 3.68608529399e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.959181098279,
+          "reproduced": 0.959181098279,
+          "absolute_difference": 0.0,
+          "tolerance": 5.295905491395e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.870167226741,
+          "reproduced": 0.870167226741,
+          "absolute_difference": 0.0,
+          "tolerance": 4.850836133705e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.02480349247,
+          "reproduced": 1.02480349247,
+          "absolute_difference": 0.0,
+          "tolerance": 5.62401746235e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.959181098279,
+          "reproduced": 0.959181098279,
+          "absolute_difference": 0.0,
+          "tolerance": 5.295905491395e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.870167226741,
+          "reproduced": 0.870167226741,
+          "absolute_difference": 0.0,
+          "tolerance": 4.850836133705e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.02825126092,
+          "reproduced": 1.02825126092,
+          "absolute_difference": 0.0,
+          "tolerance": 5.641256304600001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00187138447368,
+          "reproduced": 0.00187138447368,
+          "absolute_difference": 0.0,
+          "tolerance": 5.093569223684e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00115533725246,
+          "reproduced": 0.00115533725246,
+          "absolute_difference": 0.0,
+          "tolerance": 5.057766862623e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00210095256677,
+          "reproduced": 0.00210095256677,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1050476283385e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.431200433,
+          "reproduced": 0.431200433,
+          "absolute_difference": 0.0,
+          "tolerance": 2.656002165e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0204,
+          "reproduced": 0.0204,
+          "absolute_difference": 0.0,
+          "tolerance": 6.020000000000001e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00878301384607,
+          "reproduced": 0.00878301384607,
+          "absolute_difference": 0.0,
+          "tolerance": 5.4391506923035e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.375216484953,
+          "reproduced": 0.375216484953,
+          "absolute_difference": 0.0,
+          "tolerance": 2.376082424765e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.395616484953,
+          "reproduced": 0.395616484953,
+          "absolute_difference": 0.0,
+          "tolerance": 2.4780824247650003e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0121757086101,
+          "reproduced": 0.0121757086101,
+          "absolute_difference": 0.0,
+          "tolerance": 5.6087854305050005e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "vector_m5p000_rep001_electron_qa2_bdt",
+      "mass_GeV": 5.0,
+      "rep": 1,
+      "signal_type": "vector",
+      "feature_set": "electron_qa2",
+      "method": "bdt",
+      "profile": "depth3_800",
+      "photon_xs_pb": 0.431200433,
+      "dis_xs_pb": "0.0204",
+      "seconds": 4.972993850708008,
+      "signature": "a44bc01a622b7bfab17cd97b987437137d3140512002f16d28c561428873a6b5",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron_qa2/bdt/depth3_800/metrics.csv": "f1f98abb700eb34063742aaecea9f1857b06e2800ec55f7782917bf84269e9ce",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron_qa2/bdt_selected.csv": "22bcdddafc0b0cf9a0326955a96a37f751ee7ceeae728c5466dff6db8d475153",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron_qa2/bdt/depth3_800/dataset/weights/TMVAClassification_BDTG.weights.xml.gz": "43eaab776cffd19566578d815c27c220134edf398de037d3e167b23a1995186c",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/data/signal_validation.root": "51362f4998b32a090e5c6e65a62111fa5ec54807ca1e84e952483ff0702ba13d",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_001/m5p000/validation.root": "0ab628035a412c0110a59664a7e1570783d9675e6083283c20a24c6daa06b11b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_bdt/original_model.xml": "d7013541461d9cef96e8f9d282608a4540d0c8e305e459b1f9344033929b43b3",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_bdt/validation_metrics.csv": "21145b567b09e722be33ed38291207cf83e77588457f2ba118387e9315f48e9c",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_bdt/command.json": "414634a2005aa3684de524b8edc754a84889d1f6594a200ee9736760e6025e49",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_bdt/validation_signal_scores.csv": "226fe6ec5028f6fd174bff5444279563346df7e07b6d4a37272a5d6319fa1ef9",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_bdt/validation_photon_scores.csv": "e0acf5907c56466d14f7e6cb43bd8f5f1c9dd459c2cca37e83afc4851577b2de",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_bdt/evaluation.log": "6eea327a64a78f7682a9c499d87be0c868a719f80b46a8c0b27ab5664b7d8793"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 14202.0,
+          "reproduced": 14202.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 119356.0,
+          "reproduced": 119356.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.696432948851,
+          "reproduced": 0.696432948851,
+          "absolute_difference": 0.0,
+          "tolerance": 3.982164744255e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": -0.292472103157,
+          "reproduced": -0.292472103157,
+          "absolute_difference": 0.0,
+          "tolerance": 1.9623605157850002e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.961757298862,
+          "reproduced": 0.961757298862,
+          "absolute_difference": 0.0,
+          "tolerance": 5.30878649431e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.72092825346,
+          "reproduced": 0.72092825346,
+          "absolute_difference": 0.0,
+          "tolerance": 4.1046412673e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.12293642126,
+          "reproduced": 1.12293642126,
+          "absolute_difference": 0.0,
+          "tolerance": 6.1146821063e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.696432948851,
+          "reproduced": 0.696432948851,
+          "absolute_difference": 0.0,
+          "tolerance": 3.982164744255e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.961757298862,
+          "reproduced": 0.961757298862,
+          "absolute_difference": 0.0,
+          "tolerance": 5.30878649431e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.72092825346,
+          "reproduced": 0.72092825346,
+          "absolute_difference": 0.0,
+          "tolerance": 4.1046412673e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.12293642126,
+          "reproduced": 1.12293642126,
+          "absolute_difference": 0.0,
+          "tolerance": 6.1146821063e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.961757298862,
+          "reproduced": 0.961757298862,
+          "absolute_difference": 0.0,
+          "tolerance": 5.30878649431e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.72092825346,
+          "reproduced": 0.72092825346,
+          "absolute_difference": 0.0,
+          "tolerance": 4.1046412673e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.13271191239,
+          "reproduced": 1.13271191239,
+          "absolute_difference": 0.0,
+          "tolerance": 6.163559561950001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00181379868843,
+          "reproduced": 0.00181379868843,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0906899344215e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00154176863724,
+          "reproduced": 0.00154176863724,
+          "absolute_difference": 0.0,
+          "tolerance": 5.077088431862e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00239888255312,
+          "reproduced": 0.00239888255312,
+          "absolute_difference": 0.0,
+          "tolerance": 5.119944127656e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.431200433,
+          "reproduced": 0.431200433,
+          "absolute_difference": 0.0,
+          "tolerance": 2.656002165e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0204,
+          "reproduced": 0.0204,
+          "absolute_difference": 0.0,
+          "tolerance": 6.020000000000001e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00880660355758,
+          "reproduced": 0.00880660355758,
+          "absolute_difference": 0.0,
+          "tolerance": 5.4403301778790004e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.310864575054,
+          "reproduced": 0.310864575054,
+          "absolute_difference": 0.0,
+          "tolerance": 2.0543228752700002e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.331264575054,
+          "reproduced": 0.331264575054,
+          "absolute_difference": 0.0,
+          "tolerance": 2.1563228752700002e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0563250733776,
+          "reproduced": 0.0563250733776,
+          "absolute_difference": 0.0,
+          "tolerance": 7.81625366888e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "vector_m5p000_rep001_electron_qa2_likelihood",
+      "mass_GeV": 5.0,
+      "rep": 1,
+      "signal_type": "vector",
+      "feature_set": "electron_qa2",
+      "method": "likelihood",
+      "profile": "h08",
+      "photon_xs_pb": 0.431200433,
+      "dis_xs_pb": "0.0204",
+      "seconds": 16.61385416984558,
+      "signature": "6b598f4891b6a48e33adc5cdad63e69c4196d5a5a32381d5ae198ec58e09c4f1",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron_qa2/likelihood/h08/metrics.csv": "3462f4f53dec12b65163aca8d3a6c4609be0a896381f5831a970f7aa6e677aa4",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron_qa2/likelihood_selected.csv": "98e2985ce1f5d75715962d337c3ffa83ec36308dd732fdf3fc4b9e3a4b7037ba",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/electron_qa2/likelihood/h08/dataset/weights/TMVAClassification_PDERS.weights.xml.gz": "f26cf4cbc3d59b4c9eaba8ef6681d92699586c436a221751a2d6f1836d33e29b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_001/vector_m5p000/data/signal_validation.root": "51362f4998b32a090e5c6e65a62111fa5ec54807ca1e84e952483ff0702ba13d",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_001/m5p000/validation.root": "0ab628035a412c0110a59664a7e1570783d9675e6083283c20a24c6daa06b11b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_likelihood/original_model.xml": "2e94ac8ae9c9d82493c31baf760bae84927ef5fa04a8f6022974ab713fa5495f",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_likelihood/validation_metrics.csv": "234c5962b9fb97bddd95a3092d8ee1da2f3323b757d8282f348193c5c1fd917a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_likelihood/command.json": "aac27102529917d176795f62faf78d4e99273101091040f980988233c504ff74",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_likelihood/validation_signal_scores.csv": "b6de7b21424c95df680ab487f7fa84c2667eac478e1a3830fe044053fc26debb",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_likelihood/validation_photon_scores.csv": "9ffedfdf06a229c05578fe2dd1c7f6a92b19396f8a800c64fb8da615a34a39fd",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m5p000_rep001_electron_qa2_likelihood/evaluation.log": "d4035343d358e345062f3850ae0b6edf05b9b83f8d2f6baae9857c8f85780fc4"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 14202.0,
+          "reproduced": 14202.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 119356.0,
+          "reproduced": 119356.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.698200349574,
+          "reproduced": 0.698200349574,
+          "absolute_difference": 0.0,
+          "tolerance": 3.99100174787e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": 0.395106237629,
+          "reproduced": 0.395106237629,
+          "absolute_difference": 0.0,
+          "tolerance": 2.4755311881450003e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.957131354561,
+          "reproduced": 0.957131354561,
+          "absolute_difference": 0.0,
+          "tolerance": 5.285656772805001e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.710479223792,
+          "reproduced": 0.710479223792,
+          "absolute_difference": 0.0,
+          "tolerance": 4.0523961189600003e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.12521360109,
+          "reproduced": 1.12521360109,
+          "absolute_difference": 0.0,
+          "tolerance": 6.126068005450001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.698200349574,
+          "reproduced": 0.698200349574,
+          "absolute_difference": 0.0,
+          "tolerance": 3.99100174787e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.957131354561,
+          "reproduced": 0.957131354561,
+          "absolute_difference": 0.0,
+          "tolerance": 5.285656772805001e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.710479223792,
+          "reproduced": 0.710479223792,
+          "absolute_difference": 0.0,
+          "tolerance": 4.0523961189600003e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.12521360109,
+          "reproduced": 1.12521360109,
+          "absolute_difference": 0.0,
+          "tolerance": 6.126068005450001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.957131354561,
+          "reproduced": 0.957131354561,
+          "absolute_difference": 0.0,
+          "tolerance": 5.285656772805001e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.710479223792,
+          "reproduced": 0.710479223792,
+          "absolute_difference": 0.0,
+          "tolerance": 4.0523961189600003e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.13552278274,
+          "reproduced": 1.13552278274,
+          "absolute_difference": 0.0,
+          "tolerance": 6.177613913700001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00191574504303,
+          "reproduced": 0.00191574504303,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0957872521515e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00155894504975,
+          "reproduced": 0.00155894504975,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0779472524875e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00253216675885,
+          "reproduced": 0.00253216675885,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1266083379425e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.431200433,
+          "reproduced": 0.431200433,
+          "absolute_difference": 0.0,
+          "tolerance": 2.656002165e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0204,
+          "reproduced": 0.0204,
+          "absolute_difference": 0.0,
+          "tolerance": 6.020000000000001e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.0087642447862,
+          "reproduced": 0.0087642447862,
+          "absolute_difference": 0.0,
+          "tolerance": 5.43821223931e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.306358948937,
+          "reproduced": 0.306358948937,
+          "absolute_difference": 0.0,
+          "tolerance": 2.031794744685e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.326758948937,
+          "reproduced": 0.326758948937,
+          "absolute_difference": 0.0,
+          "tolerance": 2.1337947446850004e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.057280450135,
+          "reproduced": 0.057280450135,
+          "absolute_difference": 0.0,
+          "tolerance": 7.86402250675e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "vector_m6p310_rep004_electron_bdt",
+      "mass_GeV": 6.31,
+      "rep": 4,
+      "signal_type": "vector",
+      "feature_set": "electron",
+      "method": "bdt",
+      "profile": "depth3",
+      "photon_xs_pb": 0.35174984,
+      "dis_xs_pb": "0.0155",
+      "seconds": 2.4620542526245117,
+      "signature": "67ceda6d069dcce05e456a194a0e7648af23202b24d6270ca126ff833872de56",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron/bdt/depth3/metrics.csv": "a6296183d0b94c3da5fffbdb544a6d7cce4dff2f85521b5190fe2e7d5d4343b9",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron/bdt_selected.csv": "783b5ed4465396c1211f30da568df53e3b1f69054a89f9b0470630a42a84cefb",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron/bdt/depth3/dataset/weights/TMVAClassification_BDTG.weights.xml.gz": "11b59e8d25c598f9a56753505b7ad31de0462652ea3c1192c1bee6183b77c057",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/data/signal_validation.root": "67adca025d639edc0978f14e00daf0c6f5783b974e3eda46d10a9cdb2ee8b574",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_004/m6p310/validation.root": "cd7031ec03ce5340a56d306fa0a5f061cab4df6cec3ee127fe61d921963e8a11",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_bdt/original_model.xml": "ae45bc1c836f6445900ddb0f9923f00241b7e08d326a595577fb5813941b11b6",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_bdt/validation_metrics.csv": "9409809f283033b498fa0ee01847803e603691127aba6bb882b98597f24c2639",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_bdt/command.json": "782c0a7378c0395b137950c32bae3059373cfa97e7cdbfc0bb562a528eb19f40",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_bdt/validation_signal_scores.csv": "da4192d8b228e877d48db37479cab8a0aeb2265f6b271e106f8e70843ddb18d1",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_bdt/validation_photon_scores.csv": "e266fd37feb11357491088793ffcb2aba012bfa09ebe875e2309b202cda27225",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_bdt/evaluation.log": "bee42d6637f2d03b58443fa0c8e66beea5dc9e3629574008b2b33b7c5c74eb5d"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 15404.0,
+          "reproduced": 15404.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 118959.0,
+          "reproduced": 118959.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.638706756828,
+          "reproduced": 0.638706756828,
+          "absolute_difference": 0.0,
+          "tolerance": 3.69353378414e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": -0.72536232186,
+          "reproduced": -0.72536232186,
+          "absolute_difference": 0.0,
+          "tolerance": 4.1268116093e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.99067932752,
+          "reproduced": 0.99067932752,
+          "absolute_difference": 0.0,
+          "tolerance": 5.453396637600001e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.947406515055,
+          "reproduced": 0.947406515055,
+          "absolute_difference": 0.0,
+          "tolerance": 5.237032575275001e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.01661554005,
+          "reproduced": 1.01661554005,
+          "absolute_difference": 0.0,
+          "tolerance": 5.583077700250001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.638706756828,
+          "reproduced": 0.638706756828,
+          "absolute_difference": 0.0,
+          "tolerance": 3.69353378414e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.99067932752,
+          "reproduced": 0.99067932752,
+          "absolute_difference": 0.0,
+          "tolerance": 5.453396637600001e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.947406515055,
+          "reproduced": 0.947406515055,
+          "absolute_difference": 0.0,
+          "tolerance": 5.237032575275001e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.01661554005,
+          "reproduced": 1.01661554005,
+          "absolute_difference": 0.0,
+          "tolerance": 5.583077700250001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.99067932752,
+          "reproduced": 0.99067932752,
+          "absolute_difference": 0.0,
+          "tolerance": 5.453396637600001e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.947406515055,
+          "reproduced": 0.947406515055,
+          "absolute_difference": 0.0,
+          "tolerance": 5.237032575275001e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.01780579022,
+          "reproduced": 1.01780579022,
+          "absolute_difference": 0.0,
+          "tolerance": 5.5890289511e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.000870516997828,
+          "reproduced": 0.000870516997828,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0435258498914004e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.000793827957447,
+          "reproduced": 0.000793827957447,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0396913978723503e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.000981646802756,
+          "reproduced": 0.000981646802756,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0490823401378e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.35174984,
+          "reproduced": 0.35174984,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2587492000000001e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0155,
+          "reproduced": 0.0155,
+          "absolute_difference": 0.0,
+          "tolerance": 5.775e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00470490365026,
+          "reproduced": 0.00470490365026,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2352451825130004e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.333250090085,
+          "reproduced": 0.333250090085,
+          "absolute_difference": 0.0,
+          "tolerance": 2.1662504504250003e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.348750090085,
+          "reproduced": 0.348750090085,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2437504504250003e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.00820565441168,
+          "reproduced": 0.00820565441168,
+          "absolute_difference": 0.0,
+          "tolerance": 5.410282720584e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "vector_m6p310_rep004_electron_likelihood",
+      "mass_GeV": 6.31,
+      "rep": 4,
+      "signal_type": "vector",
+      "feature_set": "electron",
+      "method": "likelihood",
+      "profile": "h04",
+      "photon_xs_pb": 0.35174984,
+      "dis_xs_pb": "0.0155",
+      "seconds": 9.174827098846436,
+      "signature": "73985dafdf16f55b3647d2af40e88486a3e91dd3a075c36d9dc2929e55c76989",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron/likelihood/h04/metrics.csv": "abffc58bc05dd0a1f6c8d8c05d9eedd41aa1e17420e95897577ecd9610c2b5d3",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron/likelihood_selected.csv": "7e798bbc322105a770a075e76b9c3fd8e1b9703b0a8823505bdc7767a76c4b17",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron/likelihood/h04/dataset/weights/TMVAClassification_PDERS.weights.xml.gz": "b99b302a3c5d5abb718531f3f5a0a5f9cdb6409a37bd8cef8eea30ac13b71f6f",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/data/signal_validation.root": "67adca025d639edc0978f14e00daf0c6f5783b974e3eda46d10a9cdb2ee8b574",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_004/m6p310/validation.root": "cd7031ec03ce5340a56d306fa0a5f061cab4df6cec3ee127fe61d921963e8a11",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_likelihood/original_model.xml": "4f161b4d97ea30fc316866d025a138a7158e8dec3a58dfe546b069953b0ade9b",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_likelihood/validation_metrics.csv": "58de661ea06012decaa2e089f9b0ea1715624b43ae28da1d2bf943cab49dec2e",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_likelihood/command.json": "2da5de7c768589a1994eae742a5b389c610d3f9902f1d8134341472e57f43c1c",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_likelihood/validation_signal_scores.csv": "0177982915fe85ced3dd8472472c4e07b0b1fae061067b0a69920ad095da2445",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_likelihood/validation_photon_scores.csv": "f7f6c2a804c92c3e30a1f0e324a060caae25c43f5818218652b58b944e6a927f",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_likelihood/evaluation.log": "e8dd7c4df58a8ca25ad7b255cc973f17a54c99afdc51a8c7ea62c23e597d5890"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 15404.0,
+          "reproduced": 15404.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 118959.0,
+          "reproduced": 118959.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.632370352502,
+          "reproduced": 0.632370352502,
+          "absolute_difference": 0.0,
+          "tolerance": 3.66185176251e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": 0.249849231623,
+          "reproduced": 0.249849231623,
+          "absolute_difference": 0.0,
+          "tolerance": 1.7492461581150002e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.9871562377,
+          "reproduced": 0.9871562377,
+          "absolute_difference": 0.0,
+          "tolerance": 5.435781188500001e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.935491295804,
+          "reproduced": 0.935491295804,
+          "absolute_difference": 0.0,
+          "tolerance": 5.177456479020001e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.01914260376,
+          "reproduced": 1.01914260376,
+          "absolute_difference": 0.0,
+          "tolerance": 5.5957130188e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.632370352502,
+          "reproduced": 0.632370352502,
+          "absolute_difference": 0.0,
+          "tolerance": 3.66185176251e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.9871562377,
+          "reproduced": 0.9871562377,
+          "absolute_difference": 0.0,
+          "tolerance": 5.435781188500001e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.935491295804,
+          "reproduced": 0.935491295804,
+          "absolute_difference": 0.0,
+          "tolerance": 5.177456479020001e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.01914260376,
+          "reproduced": 1.01914260376,
+          "absolute_difference": 0.0,
+          "tolerance": 5.5957130188e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.9871562377,
+          "reproduced": 0.9871562377,
+          "absolute_difference": 0.0,
+          "tolerance": 5.435781188500001e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.935491295804,
+          "reproduced": 0.935491295804,
+          "absolute_difference": 0.0,
+          "tolerance": 5.177456479020001e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.02062456883,
+          "reproduced": 1.02062456883,
+          "absolute_difference": 0.0,
+          "tolerance": 5.60312284415e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00102006103476,
+          "reproduced": 0.00102006103476,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0510030517380005e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.000873617382567,
+          "reproduced": 0.000873617382567,
+          "absolute_difference": 0.0,
+          "tolerance": 5.04368086912835e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00114698870112,
+          "reproduced": 0.00114698870112,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0573494350560003e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.35174984,
+          "reproduced": 0.35174984,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2587492000000001e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0155,
+          "reproduced": 0.0155,
+          "absolute_difference": 0.0,
+          "tolerance": 5.775e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00468817190096,
+          "reproduced": 0.00468817190096,
+          "absolute_difference": 0.0,
+          "tolerance": 5.234408595048e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.329058913621,
+          "reproduced": 0.329058913621,
+          "absolute_difference": 0.0,
+          "tolerance": 2.145294568105e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.344558913621,
+          "reproduced": 0.344558913621,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2227945681050003e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.00943604312024,
+          "reproduced": 0.00943604312024,
+          "absolute_difference": 0.0,
+          "tolerance": 5.471802156012e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "vector_m6p310_rep004_electron_qa2_bdt",
+      "mass_GeV": 6.31,
+      "rep": 4,
+      "signal_type": "vector",
+      "feature_set": "electron_qa2",
+      "method": "bdt",
+      "profile": "depth3_800",
+      "photon_xs_pb": 0.35174984,
+      "dis_xs_pb": "0.0155",
+      "seconds": 4.239432096481323,
+      "signature": "566ecbd7596fd36a4a4efd49381c4e5c792f0ab39c3e775c5e1913d63ada1a61",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron_qa2/bdt/depth3_800/metrics.csv": "1fc96c81b436b806fae09d6d38757f5e95ed5792fdb07ca118b151470c0d0eb3",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron_qa2/bdt_selected.csv": "e2a84f6fa24def8da7ed77d19e84c8c89859d85244f02f436075f75361cb8939",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron_qa2/bdt/depth3_800/dataset/weights/TMVAClassification_BDTG.weights.xml.gz": "47f74c512d1d661b7a56496410f837390fe80889788eb84d2e3df91732dcc9e4",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/data/signal_validation.root": "67adca025d639edc0978f14e00daf0c6f5783b974e3eda46d10a9cdb2ee8b574",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_004/m6p310/validation.root": "cd7031ec03ce5340a56d306fa0a5f061cab4df6cec3ee127fe61d921963e8a11",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_bdt/original_model.xml": "e896e22d06851873cbada420d8514f63423eb9e50721fd3b3c7038060d140d73",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_bdt/validation_metrics.csv": "cbdc4dcd6e60646b8c6530e59d1d571a4af019be288252b80dba4a0d00fbae6d",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_bdt/command.json": "f2d595fa433078d3eadcc83238fb54be3cb96b5967eeac8c05da89d6852550ec",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_bdt/validation_signal_scores.csv": "3ff603e1204ce020c3319b97d60fa28932cd289227237f9ce7865e23c00e860a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_bdt/validation_photon_scores.csv": "5d57486175cc1479023d322d0c1fe8418bc795bce0669da288a81ea1cb01de20",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_bdt/evaluation.log": "0f70e96cc50aa3c53c79e5ce24c5b90b5c04944b3f9224e947e08c78cd258795"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 15404.0,
+          "reproduced": 15404.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 118959.0,
+          "reproduced": 118959.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.72194090148,
+          "reproduced": 0.72194090148,
+          "absolute_difference": 0.0,
+          "tolerance": 4.1097045074000003e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": -0.174201866063,
+          "reproduced": -0.174201866063,
+          "absolute_difference": 0.0,
+          "tolerance": 1.371009330315e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.945237850808,
+          "reproduced": 0.945237850808,
+          "absolute_difference": 0.0,
+          "tolerance": 5.22618925404e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.65658372405,
+          "reproduced": 0.65658372405,
+          "absolute_difference": 0.0,
+          "tolerance": 3.78291862025e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.15386410531,
+          "reproduced": 1.15386410531,
+          "absolute_difference": 0.0,
+          "tolerance": 6.269320526550001e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.72194090148,
+          "reproduced": 0.72194090148,
+          "absolute_difference": 0.0,
+          "tolerance": 4.1097045074000003e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.945237850808,
+          "reproduced": 0.945237850808,
+          "absolute_difference": 0.0,
+          "tolerance": 5.22618925404e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.65658372405,
+          "reproduced": 0.65658372405,
+          "absolute_difference": 0.0,
+          "tolerance": 3.78291862025e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.15386410531,
+          "reproduced": 1.15386410531,
+          "absolute_difference": 0.0,
+          "tolerance": 6.269320526550001e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.945237850808,
+          "reproduced": 0.945237850808,
+          "absolute_difference": 0.0,
+          "tolerance": 5.22618925404e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.65658372405,
+          "reproduced": 0.65658372405,
+          "absolute_difference": 0.0,
+          "tolerance": 3.78291862025e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.16653036388,
+          "reproduced": 1.16653036388,
+          "absolute_difference": 0.0,
+          "tolerance": 6.332651819400001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00206109436334,
+          "reproduced": 0.00206109436334,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1030547181670004e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.0016886814228,
+          "reproduced": 0.0016886814228,
+          "absolute_difference": 0.0,
+          "tolerance": 5.08443407114e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.00287467854749,
+          "reproduced": 0.00287467854749,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1437339273745e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.35174984,
+          "reproduced": 0.35174984,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2587492000000001e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0155,
+          "reproduced": 0.0155,
+          "absolute_difference": 0.0,
+          "tolerance": 5.775e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00448909439321,
+          "reproduced": 0.00448909439321,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2244547196605e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.230953219881,
+          "reproduced": 0.230953219881,
+          "absolute_difference": 0.0,
+          "tolerance": 1.6547660994050002e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.246453219881,
+          "reproduced": 0.246453219881,
+          "absolute_difference": 0.0,
+          "tolerance": 1.7322660994050002e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.069057905488,
+          "reproduced": 0.069057905488,
+          "absolute_difference": 0.0,
+          "tolerance": 8.452895274400001e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    },
+    {
+      "case": "vector_m6p310_rep004_electron_qa2_likelihood",
+      "mass_GeV": 6.31,
+      "rep": 4,
+      "signal_type": "vector",
+      "feature_set": "electron_qa2",
+      "method": "likelihood",
+      "profile": "h08",
+      "photon_xs_pb": 0.35174984,
+      "dis_xs_pb": "0.0155",
+      "seconds": 12.283336400985718,
+      "signature": "8a9b401760e82f992f19c1fe300964acf204ff02da01e9305da67f455ea18530",
+      "input_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron_qa2/likelihood/h08/metrics.csv": "c6cf514d6db19c7a34f6dda307d423c8339ca6fbadbb6556e75492d6a98b4f50",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron_qa2/likelihood_selected.csv": "cfc2d11efeb9d6c7d1f09b61869fef8d1cbc81b119e89b30f2274d6cf24be263",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/electron_qa2/likelihood/h08/dataset/weights/TMVAClassification_PDERS.weights.xml.gz": "08fe48401c6ef0397e40552bc1c7541ba76c272825f0563ffceee6486bef0972",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/fits/rep_004/vector_m6p310/data/signal_validation.root": "67adca025d639edc0978f14e00daf0c6f5783b974e3eda46d10a9cdb2ee8b574",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_refit/data/rep_004/m6p310/validation.root": "cd7031ec03ce5340a56d306fa0a5f061cab4df6cec3ee127fe61d921963e8a11",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/bin/rethreshold_validation": "08acf324101c578075262aebac3f7307485b0c5026a390775cd24b2ec8f6cee4"
+      },
+      "output_sha256": {
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_likelihood/original_model.xml": "d53e6e3094236a4bc3e80255e69ef013b4fdf207f11f6174b98707611e024684",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_likelihood/validation_metrics.csv": "b542ba4a5e29f3bec1ba96d7afae26b4c6ba3e5259cc1e07a338889ad1d128f1",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_likelihood/command.json": "679450ba0c0328c6d47e72b04366d0e5586dc7e768f431b12660d3a14337be8a",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_likelihood/validation_signal_scores.csv": "04ec54a7d69d6863b82fd10758df5a5e6e4e44d1ed87662f9c4e5ed677239922",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_likelihood/validation_photon_scores.csv": "f9ef2ae9f2751e959b78b6fcce45487a076894076e9e4153aee3a77e491158ff",
+        "/Users/rojaemighty/Documents/ChatGPT/Dark/revision_analysis/stratified_repair/qa/original_validation/vector_m6p310_rep004_electron_qa2_likelihood/evaluation.log": "aae8b5b6953ef46d5f7a5b252dff56ba89acfeb9b778a4576f95f01265618adb"
+      },
+      "passed": true,
+      "comparisons": {
+        "evaluation_signal_entries": {
+          "original": 15404.0,
+          "reproduced": 15404.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "evaluation_background_entries": {
+          "original": 118959.0,
+          "reproduced": 118959.0,
+          "absolute_difference": 0.0,
+          "tolerance": 0.0,
+          "passed": true
+        },
+        "validation_auc": {
+          "original": 0.723073364964,
+          "reproduced": 0.723073364964,
+          "absolute_difference": 0.0,
+          "tolerance": 4.11536682482e-10,
+          "passed": true
+        },
+        "validation_threshold": {
+          "original": 0.431515842629,
+          "reproduced": 0.431515842629,
+          "absolute_difference": 0.0,
+          "tolerance": 2.657579213145e-10,
+          "passed": true
+        },
+        "validation_signal_efficiency": {
+          "original": 0.945360179435,
+          "reproduced": 0.945360179435,
+          "absolute_difference": 0.0,
+          "tolerance": 5.226800897175e-10,
+          "passed": true
+        },
+        "validation_photon_efficiency": {
+          "original": 0.658239021947,
+          "reproduced": 0.658239021947,
+          "absolute_difference": 0.0,
+          "tolerance": 3.791195109735e-10,
+          "passed": true
+        },
+        "validation_significance_improvement": {
+          "original": 1.15265265396,
+          "reproduced": 1.15265265396,
+          "absolute_difference": 0.0,
+          "tolerance": 6.2632632698e-10,
+          "passed": true
+        },
+        "auc": {
+          "original": 0.723073364964,
+          "reproduced": 0.723073364964,
+          "absolute_difference": 0.0,
+          "tolerance": 4.11536682482e-10,
+          "passed": true
+        },
+        "signal_efficiency": {
+          "original": 0.945360179435,
+          "reproduced": 0.945360179435,
+          "absolute_difference": 0.0,
+          "tolerance": 5.226800897175e-10,
+          "passed": true
+        },
+        "photon_background_efficiency": {
+          "original": 0.658239021947,
+          "reproduced": 0.658239021947,
+          "absolute_difference": 0.0,
+          "tolerance": 3.791195109735e-10,
+          "passed": true
+        },
+        "significance_improvement": {
+          "original": 1.15265265396,
+          "reproduced": 1.15265265396,
+          "absolute_difference": 0.0,
+          "tolerance": 6.2632632698e-10,
+          "passed": true
+        },
+        "signal_efficiency_photon_only": {
+          "original": 0.945360179435,
+          "reproduced": 0.945360179435,
+          "absolute_difference": 0.0,
+          "tolerance": 5.226800897175e-10,
+          "passed": true
+        },
+        "photon_efficiency_photon_only": {
+          "original": 0.658239021947,
+          "reproduced": 0.658239021947,
+          "absolute_difference": 0.0,
+          "tolerance": 3.791195109735e-10,
+          "passed": true
+        },
+        "significance_improvement_photon_only": {
+          "original": 1.16521345958,
+          "reproduced": 1.16521345958,
+          "absolute_difference": 0.0,
+          "tolerance": 6.326067297900001e-10,
+          "passed": true
+        },
+        "signal_efficiency_mc_error": {
+          "original": 0.00205892423799,
+          "reproduced": 0.00205892423799,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1029462118995e-11,
+          "passed": true
+        },
+        "photon_efficiency_mc_error": {
+          "original": 0.00168672888181,
+          "reproduced": 0.00168672888181,
+          "absolute_difference": 0.0,
+          "tolerance": 5.0843364440905005e-11,
+          "passed": true
+        },
+        "significance_improvement_mc_error": {
+          "original": 0.0028667026556,
+          "reproduced": 0.0028667026556,
+          "absolute_difference": 0.0,
+          "tolerance": 5.1433351327800005e-11,
+          "passed": true
+        },
+        "photon_xs_pb": {
+          "original": 0.35174984,
+          "reproduced": 0.35174984,
+          "absolute_difference": 0.0,
+          "tolerance": 2.2587492000000001e-10,
+          "passed": true
+        },
+        "dis_xs_pb": {
+          "original": 0.0155,
+          "reproduced": 0.0155,
+          "absolute_difference": 0.0,
+          "tolerance": 5.775e-11,
+          "passed": true
+        },
+        "ml_signal_xs_pb": {
+          "original": 0.00448967535255,
+          "reproduced": 0.00448967535255,
+          "absolute_difference": 0.0,
+          "tolerance": 5.2244837676275e-11,
+          "passed": true
+        },
+        "ml_photon_xs_pb": {
+          "original": 0.231535470652,
+          "reproduced": 0.231535470652,
+          "absolute_difference": 0.0,
+          "tolerance": 1.65767735326e-10,
+          "passed": true
+        },
+        "ml_total_background_xs_pb": {
+          "original": 0.247035470652,
+          "reproduced": 0.247035470652,
+          "absolute_difference": 0.0,
+          "tolerance": 1.73517735326e-10,
+          "passed": true
+        },
+        "coupling_reach_improvement": {
+          "original": 0.0685688184794,
+          "reproduced": 0.0685688184794,
+          "absolute_difference": 0.0,
+          "tolerance": 8.428440923970001e-11,
+          "passed": true
+        }
+      },
+      "reads_final_tests": false,
+      "trains_models": false
+    }
+  ]
+}

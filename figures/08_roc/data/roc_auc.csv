@@ -1,0 +1,9 @@
+boson,mass_GeV,run,feature_set,method,auc
+vector,10,1,electron,bdt,0.709265878993385
+vector,10,1,electron,likelihood,0.7047855295487442
+vector,10,1,electron_qa2,bdt,0.8536960323148163
+vector,10,1,electron_qa2,likelihood,0.8545203848999932
+scalar,10,1,electron,bdt,0.7380808174970348
+scalar,10,1,electron,likelihood,0.7220753968217862
+scalar,10,1,electron_qa2,bdt,0.8680322373088645
+scalar,10,1,electron_qa2,likelihood,0.8682056851207409

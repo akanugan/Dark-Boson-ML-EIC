@@ -1,0 +1,40 @@
+{
+  "figure": "08_roc",
+  "exit_code": 0,
+  "expected_shape": [
+    933,
+    2214,
+    3
+  ],
+  "generated_shape": [
+    933,
+    2214,
+    3
+  ],
+  "exact_rgb_pixels": true,
+  "pdf_created": true,
+  "differing_pixels": 0,
+  "pdf_exact_rendered_rgb_pixels": true,
+  "pdf_render_shape": [
+    750,
+    1772,
+    3
+  ],
+  "pdf_differing_pixels": 0,
+  "pdf_renderer": "Poppler pdftoppm, 160 dpi",
+  "renderer_note": "Exact equality measured with the same graphics libraries and fonts; alternate versions may preserve data while changing pixels.",
+  "libraries": {
+    "ROOT": "6.36.04 (Figure 4)",
+    "Matplotlib": "3.11.2",
+    "NumPy": "2.5.4",
+    "Pillow": "13.0.0"
+  },
+  "sha256": {
+    "data/roc_auc.csv": "f2f3a87b7eb49c8463ec66a09759d1e084b04959cef989e90a180b72e33ea765",
+    "data/roc_curves.csv.gz": "b6a2d55c66d37f024844e01f4eed36734a7b8f174f22ca93499ade27023d0bab",
+    "data/roc_cuts.csv": "e37482aba00a956083982552179769d6328390a81cdf915552aa823bc5a8102c",
+    "figure.pdf": "b80c20a290e9c23a67dcbf2965628e20747ea617e36c2720482dc086533b382a",
+    "figure.png": "1598024e69880cafb3e012bca92a597de07911b45c565d354d9be95ba23fd9cf",
+    "plot.py": "ebe6f8519b65c4e33746fec57d0ab83a9ba689ab86cdca804159b4121570c9a8"
+  }
+}

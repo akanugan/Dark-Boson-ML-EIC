@@ -1,0 +1,113 @@
+--- revision_analysis/rate_benchmark/sources/cm_transformed.cpp
++++ revision_analysis/rate_benchmark/sources/cm_mixture.cpp
+@@ -89,6 +89,9 @@
+   std::string photon_region = "all";
+   bool fold_phi = false;
+   bool log_pair_mass = false;
++  bool cm_box_enabled = false;
++  double cm_box_probability = 0.75;
++  std::array<double,8> cm_box{};  // lo0,hi0,...,lo3,hi3 in ORIGINAL folded CM units.
+   bool integrate_paper_cut = false;
+   bool quiet = false;
+ };
+@@ -160,6 +163,33 @@
+   }
+ 
+   bool build_event(const double* x, darkboson::EventKinematics& event,
++                   double& density_pb) const {
++    if (!cfg_.cm_box_enabled) return build_event_base(x, event, density_pb);
++    // x is uniform on the unit hypercube. This many-to-one map samples y
++    // from q(y)=(1-p)+p/Vbox*Ibox(y), not a restricted physical domain.
++    const double p = cfg_.cm_box_probability;
++    std::array<double,4> y{};
++    const bool box_channel = x[0] < p;
++    for (std::size_t j=0;j<4;++j) {
++      const double u = j==0 ? (box_channel ? x[0]/p : (x[0]-p)/(1-p)) : x[j];
++      y[j] = box_channel ? cfg_.cm_box[2*j]+u*(cfg_.cm_box[2*j+1]-cfg_.cm_box[2*j]) : u;
++    }
++    if (!build_event_base(y.data(), event, density_pb)) return false;
++    double volume=1;
++    bool inside=true;
++    for (std::size_t j=0;j<4;++j) {
++      volume *= cfg_.cm_box[2*j+1]-cfg_.cm_box[2*j];
++      inside = inside && y[j]>=cfg_.cm_box[2*j] && y[j]<=cfg_.cm_box[2*j+1];
++    }
++    const double proposal_density = (1-p)+(inside ? p/volume : 0.0);
++    // Summing over both channel preimages gives q(y); divide ONCE by q.
++    // No separate branch Jacobian or box-volume factor belongs here.
++    density_pb /= proposal_density;
++    event.density_pb = density_pb;
++    return std::isfinite(density_pb) && event.finite();
++  }
++
++  bool build_event_base(const double* x, darkboson::EventKinematics& event,
+                    double& density_pb) const {
+     const double log_ratio = std::log(t_max_ / t_min_);
+     const double t = t_min_ * std::exp(log_ratio * x[0]);
+@@ -413,6 +443,8 @@
+       << "  --integrate-paper-cut      Adapt directly to the selected phase space\n"
+       << "  --fold-phi                 Analytically integrate azimuth mirrors; rate diagnostics only\n"
+       << "  --log-pair-mass            Log map on the identical allowed pair-mass interval\n"
++      << "  --cm-box l0,h0,l1,h1,l2,h2,l3,h3  Optional full-support CM mixture box\n"
++      << "  --cm-box-probability p     Box-channel probability in (0,1); default 0.75\n"
+       << "  --quiet                     Suppress TFoam progress\n"
+       << "  --help                      Show this message\n";
+ }
+@@ -457,6 +489,17 @@
+       cfg.fold_phi = true;
+     } else if (option == "--log-pair-mass") {
+       cfg.log_pair_mass = true;
++    } else if (option == "--cm-box-probability") {
++      cfg.cm_box_probability = parse_double(value(), option);
++    } else if (option == "--cm-box") {
++      std::istringstream input(value());
++      std::string token;
++      for (std::size_t j=0;j<cfg.cm_box.size();++j) {
++        if (!std::getline(input,token,',')) throw std::runtime_error("cm box needs exactly eight comma-separated bounds");
++        cfg.cm_box[j]=parse_double(token,option);
++      }
++      if (std::getline(input,token,',')) throw std::runtime_error("cm box has extra bounds");
++      cfg.cm_box_enabled = true;
+     } else if (option == "--quiet") {
+       cfg.quiet = true;
+     } else if (option == "--help" || option == "-h") {
+@@ -469,6 +512,20 @@
+   if (!(cfg.mass > 0.0 && cfg.coupling > 0.0 && cfg.events > 0 &&
+         cfg.cells > 0 && cfg.samples > 0)) {
+     throw std::runtime_error("Mass, coupling, events, cells, and samples must be positive");
++  }
++  if (!(std::isfinite(cfg.cm_box_probability) && cfg.cm_box_probability>0 && cfg.cm_box_probability<1)) {
++    throw std::runtime_error("cm box probability must be finite and strictly between zero and one");
++  }
++  if (cfg.cm_box_enabled) {
++    if (!cfg.fold_phi || cfg.log_pair_mass) {
++      throw std::runtime_error("cm box coordinates require --fold-phi and linear pair mass (omit --log-pair-mass)");
++    }
++    for (std::size_t j=0;j<4;++j) {
++      const double lo=cfg.cm_box[2*j],hi=cfg.cm_box[2*j+1];
++      if (!(std::isfinite(lo) && std::isfinite(hi) && lo>=0 && hi<=1 && hi>lo)) {
++        throw std::runtime_error("cm box bounds must be finite, within [0,1] and increasing");
++      }
++    }
+   }
+   if (cfg.photon_region != "all" && cfg.photon_region != "central" &&
+       cfg.photon_region != "forward" && cfg.photon_region != "effective") {
+@@ -501,7 +558,17 @@
+       << ";log_pair_mass=" << (cfg.log_pair_mass ? 1 : 0)
+       << ";azimuth_mirror_integrated=" << (cfg.fold_phi ? 1 : 0)
+       << ";signed_azimuth_distribution=" << (cfg.fold_phi ? "one_representative_per_mirror_pair" : "full")
+-      << ";diagnostic_source=rate_benchmark_cm_transformed";
++      << ";cm_box_enabled=" << (cfg.cm_box_enabled ? 1 : 0)
++      << ";cm_box_probability=" << cfg.cm_box_probability
++      << ";cm_uniform_probability=" << 1-cfg.cm_box_probability
++      << ";cm_box_coordinate_basis=log_uniform_t_linear_pair_unit_cos_folded_phi"
++      << ";cm_proposal_density=uniform_plus_box;cm_integrand_correction=divide_by_total_proposal"
++      << ";cm_full_physical_domain_preserved=1"
++      << ";diagnostic_source=rate_benchmark_cm_mixture";
++  if (cfg.cm_box_enabled) {
++    out << ";cm_box_bounds=";
++    for (std::size_t j=0;j<cfg.cm_box.size();++j) out << (j ? "," : "") << cfg.cm_box[j];
++  }
+   out << ";integrate_paper_cut=" << (cfg.integrate_paper_cut ? 1 : 0);
+   return out.str();
+ }

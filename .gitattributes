@@ -1,0 +1,4 @@
+# Preserve scientific CSV bytes and their recorded SHA-256 checksums.
+*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Historical unified-diff context lines deliberately contain spaces.
+*.diff -whitespace
