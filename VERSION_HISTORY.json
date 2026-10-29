@@ -5,7 +5,17 @@
   },
   "v2": {
     "source_commit": "d9fb2e33b641c0062d1315bd1cb299a7aad0e760",
-    "scope": "Current corrected three-method study; scientific files relocated without content changes."
+    "scope": "Current three-method study. Public code is organized by function; original execution records and source checksums are retained under provenance/workflow. Numeric calculations and result values are unchanged.",
+    "public_layout": [
+      "figures",
+      "src",
+      "scripts",
+      "results",
+      "config",
+      "include",
+      "docs",
+      "provenance"
+    ]
   },
   "data_releases_unchanged": [
     "data-v1",

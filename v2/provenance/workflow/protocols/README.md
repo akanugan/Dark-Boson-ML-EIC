@@ -1,5 +1,7 @@
 # Recorded designs and their scope
 
+> Recorded execution documentation. Its commands describe the original production layout. Use the [study guide](../../../README.md) for public code locations and reproduction commands.
+
 These are preserved execution records, not interchangeable descriptions of the final configuration.
 
 | Document | Status |
@@ -9,4 +11,4 @@ These are preserved execution records, not interchangeable descriptions of the f
 | [comparison_design.md](comparison_design.md) | **EARLIER REVISION PLAN:** initial three-method design, before stratified sampling, larger fitting samples, and independent photon calibration. Its sample budgets and rate inputs are not the final configuration. |
 | [rate_benchmark.md](rate_benchmark.md) | **DIAGNOSTIC PLAN:** numerical integration and sampling-support checks. Not an alternative selector result. |
 
-Their original paths and wording are retained for provenance. For the implemented current result, use the [analysis guide](../../docs/current-analysis.md) and [corrected result tables](../stratified_repair/README.md). Exported-document checksums remain unchanged.
+Their original paths and wording are retained for provenance. For the implemented current result, use the [analysis guide](../../../docs/current-analysis.md) and [corrected result tables](../stratified_repair/README.md). Exported-document checksums remain unchanged.

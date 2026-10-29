@@ -18,7 +18,7 @@ The script writes `figure.pdf` and `figure.png` to the chosen directory. Without
 `--output-dir`, it uses a local `generated/` directory and leaves the checked-in
 reference assets unchanged. All required plotting inputs are in this folder;
 no training, simulation, or model files are needed. Numerical values are fixed
-inputs from the completed corrected study, not recomputed statistical inference.
+inputs from the completed study, not recomputed statistical inference.
 Different graphics-library/font versions can change pixels while preserving the data.
 
 ## Verification

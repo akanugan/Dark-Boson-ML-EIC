@@ -1,6 +1,6 @@
 # Current analysis guide
 
-Use [`revision/`](../revision/README.md) and the current [`figures/`](../figures/README.md) entries for the corrected three-method comparison. Original BDT-versus-cuts outputs are preserved separately under [`../../v1/`](../../v1/README.md). Run current commands from `v2/`.
+Use the [source guide](../src/README.md), [analysis scripts](../scripts/README.md), [results](../results/README.md), and [figures](../figures/README.md) to navigate the three-method comparison. Original BDT-versus-cuts outputs are preserved separately under [`../../v1/`](../../v1/README.md). Run current commands from `v2/`.
 
 ## Calculation
 
@@ -17,11 +17,11 @@ R_Z = epsilon_signal × sqrt[(sigma_photon + sigma_DIS)
 
 Comparisons use ten independent runs per boson/mass group, giving 220 analyses across eleven masses and two boson types. Each uses all six selections. Events, weights, preselection, and objective are shared within a comparison.
 
-## Photon calculation and repairs
+## Photon calculation
 
 Central photons (`|eta_gamma| ≤ 3.5`) and photons outside acceptance are generated separately. The effective rate is `epsilon × sigma_central + sigma_outside`, with nominal central miss probability `epsilon = 1e-6` and unit miss probability outside. Physical component integrals determine the mixture; event counts do not. A separate calibration fixes the common nominal photon rate at each mass.
 
-Independent phase-space and support checks identified six deficient outside-photon files. Their replacements and the affected fitting, validation, and test steps are included in the current results. The physical assumptions, calibration totals, fitting settings, and original unaffected samples were preserved. Check records retain the original source provenance; they are records of the completed calculations rather than new results generated on download.
+Sampling-support checks and production records are retained under [provenance](../provenance/README.md).
 
 The selected calibration rates are approximately 26–28% above the reference below 1 GeV and 6.3% above it at 10 GeV. A separate inclusive-distribution discrepancy remains unresolved. Rate agreement and shape agreement are distinct checks.
 

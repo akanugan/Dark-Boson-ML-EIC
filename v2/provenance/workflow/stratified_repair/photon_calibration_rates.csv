@@ -1,0 +1,12 @@
+mass_GeV,reference_v4_pb,calibration_pb,conditional_mc_error_pb,difference_pct,source
+0.01,2.06,2.6045495899999995,0.005029098984347344,26.43444611650483,revision_analysis/stratified_repair/fits/rep_001/vector_m0p010/sample_config.json
+0.032,2.06,2.64373915,0.005252220998331973,28.336851941747575,revision_analysis/stratified_repair/fits/rep_001/vector_m0p032/sample_config.json
+0.1,2.06,2.64069059,0.0052824511868965925,28.188863592233005,revision_analysis/stratified_repair/fits/rep_001/vector_m0p100/sample_config.json
+0.316,2.06,2.62973008,0.005320319105244828,27.656799999999993,revision_analysis/stratified_repair/fits/rep_001/vector_m0p316/sample_config.json
+1.0,1.93,1.972032372,0.003786752574136209,2.177843108808286,revision_analysis/stratified_repair/fits/rep_001/vector_m1p000/sample_config.json
+1.585,1.93,1.9916705419999998,0.003886494166291757,3.195364870466322,revision_analysis/stratified_repair/fits/rep_001/vector_m1p585/sample_config.json
+2.512,1.54,1.5535392129999999,0.0031061008316321565,0.8791696753246647,revision_analysis/stratified_repair/fits/rep_001/vector_m2p512/sample_config.json
+3.981,0.7,0.717427414,0.0013912433212577952,2.4896305714285694,revision_analysis/stratified_repair/fits/rep_001/vector_m3p981/sample_config.json
+5.0,0.43,0.431200433,0.0007813578483810066,0.2791704651162741,revision_analysis/stratified_repair/fits/rep_001/vector_m5p000/sample_config.json
+6.31,0.33,0.35174984,0.0006724545110058482,6.5908606060606,revision_analysis/stratified_repair/fits/rep_001/vector_m6p310/sample_config.json
+10.0,0.33,0.35079420299999997,0.0006861585945229596,6.3012736363636135,revision_analysis/stratified_repair/fits/rep_001/vector_m10p000/sample_config.json

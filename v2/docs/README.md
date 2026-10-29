@@ -1,5 +1,5 @@
-# v2 documentation
+# Study documentation
 
-Start with the [current analysis guide](current-analysis.md), [scientific workflow](../revision/README.md), and [current figures](../figures/README.md).
+The [analysis guide](current-analysis.md) defines the physical model, inputs, significance measure, and statistical comparisons.
 
-Original BDT-versus-cuts notes and protocols are preserved under [`../../v1/docs/`](../../v1/docs/README.md). Recorded v2 designs and repair procedures remain under [`../revision/protocols/`](../revision/protocols/README.md).
+Use the [figure index](../figures/README.md), [source guide](../src/README.md), [analysis commands](../scripts/README.md), and [numerical tables](../results/README.md) to navigate the study. Recorded protocols and execution history are under [provenance](../provenance/README.md).

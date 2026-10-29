@@ -1,5 +1,7 @@
 # Current tools and earlier revision tools
 
+> Recorded execution documentation. Its commands describe the original production layout. Use the [study guide](../../../README.md) for public code locations and reproduction commands.
+
 | Status | Sources | Role |
 |---|---|---|
 | **CURRENT** | `generate_photon_regions.cpp`, `merge_photon_strata.cpp`, `train_likelihood.cpp`, `export_refit_scores.cpp` | Separate photon strata, combine their physical weights, fit the estimated likelihood, and export the six selections' scores. |
@@ -7,4 +9,4 @@
 | **EARLIER REVISION ONLY** | `evaluate_three_way.cpp`, `evaluate_t_smearing.cpp`, `export_shape_scores.cpp` | Earlier scan, smearing, and shape-pilot tools; their outputs are not the corrected results. |
 | **STANDALONE UTILITY** | `export_photon_shape.cpp` | ROOT-to-CSV shape export; not called by the current corrected pipeline. |
 
-The [current build](../scripts/README.md) also compiles four [shared top-level tools](../../src/README.md) and the three repair tools. Build availability does not make an earlier evaluator's output current. Use [`../stratified_repair/`](../stratified_repair/README.md) for the reported results.
+The [current build](../scripts/README.md) also compiles four [shared top-level tools](../../../src/README.md) and the three repair tools. Build availability does not make an earlier evaluator's output current. Use [`../stratified_repair/`](../stratified_repair/README.md) for the reported results.

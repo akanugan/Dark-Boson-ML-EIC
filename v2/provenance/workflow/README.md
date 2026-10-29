@@ -1,5 +1,7 @@
 # Current three-method comparison
 
+> Recorded execution documentation. Its commands describe the original production layout. Use the [study guide](../../README.md) for public code locations and reproduction commands.
+
 This package supersedes the original BDT-versus-cuts comparison for the current results. It evaluates rectangular cuts, TMVA PDERS estimated likelihood, and BDT selections using electron inputs alone and electron inputs plus nuclear momentum transfer `t`.
 
 All commands in this version use `v2/` as the working directory. The unchanged internal paths keep the original release archives and export checksums valid from there.
@@ -18,7 +20,7 @@ Ten independent runs at eleven masses for scalar and vector signals give 220 ana
 | [`protocols/`](protocols/README.md) | Recorded designs and their scope; earlier plans are not the final execution configuration. |
 | [`rate_benchmark/`](rate_benchmark/README.md) | Integration diagnostics, including failed samplers retained to explain the repairs. |
 
-The final photon normalization comes from a separate calibration integration, recorded in [`stratified_repair/photon_calibration_rates.csv`](stratified_repair/photon_calibration_rates.csv). Calibration values override the photon entries in `config/rates.csv`. The reference DIS contribution remains fixed and unrejected. The build also uses four [shared top-level C++ tools](../src/README.md); they are current dependencies despite their original locations.
+The final photon normalization comes from a separate calibration integration, recorded in [`stratified_repair/photon_calibration_rates.csv`](stratified_repair/photon_calibration_rates.csv). Calibration values override the photon entries in `config/rates.csv`. The reference DIS contribution remains fixed and unrejected. The build also uses four [shared top-level C++ tools](../../src/README.md); they are current dependencies despite their original locations.
 
 ## Main numerical tables
 
@@ -31,9 +33,9 @@ The final photon normalization comes from a separate calibration integration, re
 
 ## What can be reproduced directly
 
-Use the compact inputs and entry points in [`../figures/`](../figures/README.md) to recreate the current figures. Aggregate plotting requires no event generation or model fitting. The unchanged inclusive photon comparison in Figure 3 uses an original `data-v1` ROOT file; the corrected comparison plots use the bundled tables.
+Use the compact inputs and entry points in [`../figures/`](../../figures/README.md) to recreate the current figures. Aggregate plotting requires no event generation or model fitting. The unchanged inclusive photon comparison in Figure 3 uses an original `data-v1` ROOT file; the corrected comparison plots use the bundled tables.
 
-The [revision-data-v2 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/revision-data-v2) provides paired per-run analysis arrays and selected models. It supports statistical reaggregation with the commands in [`scripts/README.md`](scripts/README.md). It excludes the raw events and candidate-model artifacts needed for prediction, refitting, or repeating the repair. The original `data-v1` release also lacks those later samples; see [`../DATA_DOWNLOAD.md`](../DATA_DOWNLOAD.md). Preserve the pre-repair and corrected sampler versions when following the recorded workflow: the six-file repair reused unaffected samples and changed only the diagnosed components and downstream analyses.
+The [revision-data-v2 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/revision-data-v2) provides paired per-run analysis arrays and selected models. It supports statistical reaggregation with the commands in [`scripts/README.md`](scripts/README.md). It excludes the raw events and candidate-model artifacts needed for prediction, refitting, or repeating the repair. The original `data-v1` release also lacks those later samples; see [`../DATA_DOWNLOAD.md`](../../DATA_DOWNLOAD.md). Preserve the pre-repair and corrected sampler versions when following the recorded workflow: the six-file repair reused unaffected samples and changed only the diagnosed components and downstream analyses.
 
 ## Correction provenance
 

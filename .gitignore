@@ -24,13 +24,21 @@ __pycache__/
 /bin/
 /v1/bin/
 /v2/bin/
-/v2/revision/**/bin/
+/v2/provenance/**/bin/
 /v1/figures/*/generated/
 /v2/figures/*/generated/
 /v1/download/
-/v2/revision-download/
+/v2/downloads/
 
 # Original release archives downloaded directly into v1.
 /v1/*.tar.gz
 /v1/*.part-*
 /v1/SHA256SUMS
+
+# Restored statistical arrays, models, and execution metadata.
+/v2/results/fits/
+/v2/results/smearing/*/fits/
+/v2/results/**/*.npy
+/v2/results/**/*.xml
+/v2/results/**/*.xml.gz
+/v2/results/**/*.json

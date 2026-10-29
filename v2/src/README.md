@@ -1,15 +1,21 @@
-# v2 shared generation and fitting code
+# Simulation and selection code
 
-These are current dependencies, copied into v2 so this version can build independently of v1 code.
+Build these programs with `./build.sh` from `v2/`. Executables are written to `bin/`.
 
-| Source | Role |
+| Source | Purpose |
 |---|---|
-| `generate_vector.cpp` | Vector signal generation; its massless-vector limit also supplied the inclusive photon sample used by unchanged Figure 3. |
-| `generate_scalar.cpp` | Scalar signal generation. |
-| `train_tmva.cpp` | Fits candidate BDT configurations. |
-| `optimize_rectangular_fair.cpp` | Optimizes rectangular selections. |
-| [`../include/DarkBosonKinematics.h`](../include/DarkBosonKinematics.h) | Shared kinematic definitions. |
+| [generate_vector.cpp](generate_vector.cpp) | Vector signal generation. |
+| [generate_scalar.cpp](generate_scalar.cpp) | Scalar signal generation. |
+| [generate_photons.cpp](generate_photons.cpp) | Photon generation in specified acceptance regions. |
+| [generate_photon_outside.cpp](generate_photon_outside.cpp) | Full-support laboratory-coordinate generation of photons outside acceptance. |
+| [merge_photon_samples.cpp](merge_photon_samples.cpp) | Combine central and outside photon samples using their cross sections and miss probabilities. |
+| [train_tmva.cpp](train_tmva.cpp) | Fit candidate BDT configurations. |
+| [train_likelihood.cpp](train_likelihood.cpp) | Fit the TMVA PDERS estimated likelihood. |
+| [optimize_rectangular_fair.cpp](optimize_rectangular_fair.cpp) | Optimize rectangular selections on common training and validation samples. |
+| [export_scores.cpp](export_scores.cpp) | Evaluate fitted models and cuts, including photon-loss and smearing scenarios. |
+| [select_thresholds.cpp](select_thresholds.cpp) | Select thresholds using validation events. |
+| [check_photon_sampling.cpp](check_photon_sampling.cpp) | Compare photon-sampling support and event schemas. |
 
-From `v2/`, run `revision/build.sh` to build these programs and the current photon, likelihood, score-export, and repair tools. The likelihood implementation is [`../revision/src/train_likelihood.cpp`](../revision/src/train_likelihood.cpp); current workflow details are in [`../revision/scripts/README.md`](../revision/scripts/README.md).
+The shared kinematics header is under [`../include/`](../include/README.md). Each executable reports its arguments when invoked without inputs.
 
-Current Figure 3 has a standalone [per-figure entry point](../figures/03_photon_shapes/README.md). Original multi-figure utilities are preserved under [`../../v1/src/`](../../v1/src/README.md) and are not part of this current build.
+Plotting code lives beside each [figure](../figures/README.md). The exact production drivers and configurations used to obtain the published numerical tables are retained under [`../provenance/`](../provenance/README.md); these require raw production inputs beyond the compact statistical data package.

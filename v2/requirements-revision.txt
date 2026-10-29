@@ -1,4 +1,0 @@
-# Includes all plotting and saved-array analysis dependencies.
--r requirements.txt
-# ROOT 6 with TMVA/Foam, a C++17 compiler and Boost headers are installed
-# separately. PyROOT is not required by the Python analysis scripts.

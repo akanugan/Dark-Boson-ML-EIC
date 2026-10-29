@@ -1,0 +1,39 @@
+{
+  "scope": "Layout and data-compatibility checks; no generation or fitting",
+  "cpp_programs_built": [
+    "check_photon_sampling",
+    "export_scores",
+    "generate_photon_outside",
+    "generate_photons",
+    "generate_scalar",
+    "generate_vector",
+    "merge_photon_samples",
+    "optimize_rectangular_fair",
+    "select_thresholds",
+    "train_likelihood",
+    "train_tmva"
+  ],
+  "release_import_verified_files": 8087,
+  "paired_numerical_replay": {
+    "summary.csv": {
+      "identical_bytes": true,
+      "sha256": "987107fff5892d264cea9aecaab3c77d5acc6e03425cdbb8507a9202c9178a10"
+    },
+    "selection_results.csv": {
+      "identical_bytes": true,
+      "sha256": "cf85bafec30311fa3d32035a5fca4ee1525cdae590d64b788ecf40b956b59859"
+    },
+    "scenario_summary.csv": {
+      "identical_bytes": true,
+      "sha256": "6ce5028278c835414f3fa53831a263ae4709b00f43801434ffa1d52907e56d77"
+    }
+  },
+  "plots_during_replay": "Excluded; per-figure source, inputs, and assets unchanged.",
+  "source_and_result_checks": {
+    "source_export_failures": [],
+    "result_copy_failures": [],
+    "public_source_map_failures": [],
+    "new_guide_missing_links": [],
+    "syntax_failures": []
+  }
+}

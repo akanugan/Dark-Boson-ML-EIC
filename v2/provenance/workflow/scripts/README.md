@@ -1,5 +1,7 @@
 # Revised scientific code
 
+> Recorded execution documentation. Its commands describe the original production layout. Use the [study guide](../../../README.md) for public code locations and reproduction commands.
+
 These scripts retain the numerical methods used for the corrected comparison.
 They are separate from the manuscript. Current results are in
 `revision/stratified_repair`. The preceding `stratified_refit` scan is retained

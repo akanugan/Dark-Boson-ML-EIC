@@ -1,0 +1,52 @@
+[
+  {
+    "public_path": "scripts/analyze.py",
+    "recorded_path": "provenance/workflow/scripts/analyze_stratified_refit.py",
+    "change": "Module names, default output path and documentation only."
+  },
+  {
+    "public_path": "scripts/compare_methods.py",
+    "recorded_path": "provenance/workflow/scripts/compare_selections.py",
+    "change": "Module names, default output path and documentation only."
+  },
+  {
+    "public_path": "scripts/plot_results.py",
+    "recorded_path": "provenance/workflow/scripts/plot_stratified_refit.py",
+    "change": "Module names, default output path and documentation only."
+  },
+  {
+    "public_path": "src/train_likelihood.cpp",
+    "recorded_path": "provenance/workflow/src/train_likelihood.cpp",
+    "change": "Filename/location only; identical bytes."
+  },
+  {
+    "public_path": "src/export_scores.cpp",
+    "recorded_path": "provenance/workflow/src/export_refit_scores.cpp",
+    "change": "Filename/location only; identical bytes."
+  },
+  {
+    "public_path": "src/generate_photons.cpp",
+    "recorded_path": "provenance/workflow/src/generate_photon_regions.cpp",
+    "change": "Filename/location only; identical bytes."
+  },
+  {
+    "public_path": "src/merge_photon_samples.cpp",
+    "recorded_path": "provenance/workflow/src/merge_photon_strata.cpp",
+    "change": "Filename/location only; identical bytes."
+  },
+  {
+    "public_path": "src/generate_photon_outside.cpp",
+    "recorded_path": "provenance/workflow/stratified_repair/src/generate_photon_lab.cpp",
+    "change": "Filename/location only; identical bytes."
+  },
+  {
+    "public_path": "src/select_thresholds.cpp",
+    "recorded_path": "provenance/workflow/stratified_repair/src/rethreshold_validation.cpp",
+    "change": "Include path only."
+  },
+  {
+    "public_path": "src/check_photon_sampling.cpp",
+    "recorded_path": "provenance/workflow/stratified_repair/src/validate_signed_photon.cpp",
+    "change": "Filename/location only; identical bytes."
+  }
+]
