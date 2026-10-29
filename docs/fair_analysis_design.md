@@ -1,5 +1,7 @@
 # Fair parton-level ML analysis design
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 ## Question
 
 Using the same weighted parton-level events and the same recoil-electron

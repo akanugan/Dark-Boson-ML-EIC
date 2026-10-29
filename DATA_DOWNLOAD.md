@@ -22,7 +22,9 @@ The package restores `revision/stratified_repair/`. It is sufficient to replay a
 
 Raw training/validation/test ROOT events, raw event-level scores, and unselected model weights are excluded. Repeating event-level prediction or fitting requires those current inputs or regeneration through the scientific code. The earlier `data-v1` release does not contain those later raw samples. The code, configuration, protocols, and numerical checks are under [`revision/`](revision/README.md).
 
-## Original study: data-v1
+## OLD STUDY ONLY: data-v1 (also used by unchanged Figure 3)
+
+This release preserves the original BDT-versus-cuts study, not the corrected three-method comparison. The exception is `data/ml/validation/photon_inclusive.root`, which remains the input for the unchanged [current Figure 3](figures/03_photon_shapes/README.md). `DATA_MANIFEST.csv` inventories this original release only.
 
 Download the archives and `SHA256SUMS` from the [data-v1 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/data-v1). Keep them together in the repository root and verify:
 

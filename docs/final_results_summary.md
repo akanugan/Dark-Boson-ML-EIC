@@ -1,5 +1,7 @@
 # Final proof-of-concept results
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 The weighted held-out test results show that ML improvement is mass dependent.
 For vector signals at or below 1 GeV, the classifier has little useful
 separation from coherent photon bremsstrahlung and does not improve the

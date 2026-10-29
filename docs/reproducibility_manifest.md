@@ -1,5 +1,7 @@
 # Reproducibility manifest
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 ## Frozen classical reference
 
 The equations-as-written signal baseline is preserved under
@@ -7,7 +9,7 @@ The equations-as-written signal baseline is preserved under
 `docs/baseline_manifest.md`. No factor is applied to force the selected signal
 curve onto the published red curve.
 
-## Final ML production
+## Original 21-model ML production
 
 - ROOT/TMVA: local ROOT 6.36 series build
 - Signal hypotheses: 11 vector masses and 10 scalar masses
@@ -42,7 +44,7 @@ sample.
 
 ## Main outputs
 
-- `paper/ML Paper.docx`: final paper-style report
+- `paper/ML Paper.docx`: original local report, excluded from this public repository
 - `results/ml/ml_metrics.csv`: all held-out numerical results
 - `results/ml/photon_shape_validation.csv`: public-marginal comparison
 - `plots/`: publication figures in PNG and PDF

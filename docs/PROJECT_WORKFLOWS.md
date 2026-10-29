@@ -1,5 +1,7 @@
 # EIC invisible dark-boson reproduction and ML study
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 This unified project contains the original cross-section reproduction and
 the subsequent ML study. It creates weighted, event-level scalar and vector
 signal samples, sequential Table I cut flows, and deterministic
@@ -10,19 +12,11 @@ The exact source, cut table, scan results, and validation figure used at the
 handoff are preserved under `frozen_baseline/`. Their hashes are recorded in
 `docs/baseline_manifest.md`.
 
-## Publication manuscript
+## Manuscript files
 
-The editable MDPI Particles draft is in [`paper/latex/main.tex`](paper/latex/main.tex),
-with its figures and template files included. Build it with:
-
-```sh
-make paper
-```
-
-Open [`paper/latex/main.pdf`](paper/latex/main.pdf) for the compiled manuscript.
-On macOS, you can also double-click `paper/latex/build.command`.
-See [`paper/latex/README.md`](paper/latex/README.md) for author placeholders and submission notes.
-The original Word manuscript remains in `paper/ML Paper.docx`.
+Manuscript sources, manuscript PDFs, and the original Word report are not
+included in this public repository. There is no public `make paper` target.
+The code and data below reproduce historical calculations, not a manuscript.
 
 ## Reproduce the original comparison
 

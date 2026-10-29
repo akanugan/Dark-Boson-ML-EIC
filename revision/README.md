@@ -8,14 +8,15 @@ Ten independent runs at eleven masses for scalar and vector signals give 220 ana
 
 | Directory | Contents |
 |---|---|
-| `src/` | Photon generation, stratum merging, likelihood fitting, score export, and evaluation implementations. |
-| `scripts/` | Generation, fitting, evaluation, uncertainty analysis, plotting, and repair workflows. |
-| `config/` | Electron preselection and input rate configurations. |
-| `stratified_repair/` | Current corrected results, repair workflow, and diagnostic summaries. |
-| `checks/` | Source, sampling, fitting, and result-consistency records. |
-| `protocols/` | Original study design, sampling-repair scope, and review notes. |
+| [`src/`](src/README.md) | Current scientific tools, the pre-repair sampler used by unaffected samples, and separately identified earlier evaluators. |
+| [`scripts/`](scripts/README.md) | Current aggregate entry points and full-pipeline helpers, plus clearly listed earlier revision pilots. |
+| [`config/`](config/README.md) | Electron preselection and starting rate inputs; the photon entries are overridden by calibration. |
+| [`stratified_repair/`](stratified_repair/README.md) | Current corrected results, repair workflow, and before/after diagnostics. |
+| [`checks/`](checks/README.md) | Source, sampling, fitting, and result-consistency records. |
+| [`protocols/`](protocols/README.md) | Recorded designs and their scope; earlier plans are not the final execution configuration. |
+| [`rate_benchmark/`](rate_benchmark/README.md) | Integration diagnostics, including failed samplers retained to explain the repairs. |
 
-The final photon normalization comes from a separate calibration integration. The original rate-input CSV is not, by itself, the final photon-rate table: calibration values override its photon entries for this study. The reference DIS contribution remains fixed and unrejected.
+The final photon normalization comes from a separate calibration integration, recorded in [`stratified_repair/photon_calibration_rates.csv`](stratified_repair/photon_calibration_rates.csv). Calibration values override the photon entries in `config/rates.csv`. The reference DIS contribution remains fixed and unrejected. The build also uses four [shared top-level C++ tools](../src/README.md); they are current dependencies despite their original locations.
 
 ## Main numerical tables
 
@@ -28,9 +29,9 @@ The final photon normalization comes from a separate calibration integration. Th
 
 ## What can be reproduced directly
 
-Use the compact inputs and entry points in [`../figures/`](../figures/README.md) to recreate the current figures. Aggregate plotting requires no event generation or model fitting.
+Use the compact inputs and entry points in [`../figures/`](../figures/README.md) to recreate the current figures. Aggregate plotting requires no event generation or model fitting. The unchanged inclusive photon comparison in Figure 3 uses an original `data-v1` ROOT file; the corrected comparison plots use the bundled tables.
 
-Repeating the uncertainty calculation requires the paired per-run outputs. Refitting requires the weighted events and complete configurations. Those later event/model files are not in the original `data-v1` release; see [`../DATA_DOWNLOAD.md`](../DATA_DOWNLOAD.md). Preserve the original and corrected sampler versions when following the recorded workflow: the six-file repair reused unaffected samples and changed only the diagnosed components and downstream analyses.
+The [revision-data-v2 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/revision-data-v2) provides paired per-run analysis arrays and selected models. It supports statistical reaggregation with the commands in [`scripts/README.md`](scripts/README.md). It excludes the raw events and candidate-model artifacts needed for prediction, refitting, or repeating the repair. The original `data-v1` release also lacks those later samples; see [`../DATA_DOWNLOAD.md`](../DATA_DOWNLOAD.md). Preserve the pre-repair and corrected sampler versions when following the recorded workflow: the six-file repair reused unaffected samples and changed only the diagnosed components and downstream analyses.
 
 ## Correction provenance
 

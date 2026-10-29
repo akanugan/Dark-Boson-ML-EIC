@@ -24,6 +24,6 @@ From the repository root:
 python3 figures/verify.py --project-root /path/to/project --report /tmp/figure-check.json
 ```
 
-The project root supplied here must contain the original Figure 3 inclusive ROOT sample and ancillary inputs. To verify all other figures without that sample, add `--skip-legacy`. ROOT is still required for Figure 4. The verifier uses temporary output directories and leaves the checked-in figures unchanged. It compares PNGs at native resolution and PDFs rendered at 160 dpi using Poppler. PDF timestamps may differ even when the rendered pixels match exactly. Renderer, font and library versions can affect pixel identity.
+The project root supplied here must contain `data/ml/validation/photon_inclusive.root`, the original Figure 3 inclusive sample. Its reference histograms and binned comparison are already bundled in the figure folder. To verify all other figures without that sample, add `--skip-legacy`. ROOT is still required for Figure 4. The verifier uses temporary output directories and leaves the checked-in figures unchanged. It compares PNGs at native resolution and PDFs rendered at 160 dpi using Poppler. PDF timestamps may differ even when the rendered pixels match exactly. Renderer, font and library versions can affect pixel identity.
 
 See `verification.json` and the individual figure verification records for the measured results. No manuscript source or complete manuscript PDF is distributed here.

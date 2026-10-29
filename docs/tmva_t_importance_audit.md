@@ -1,5 +1,7 @@
 # TMVA exact-t variable-importance extraction audit
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 - Source run: `/Users/rojaemighty/Dark/fair_study/t_seed_robustness/run_t_20260820_final`
 - Scope: 10 independent replicas each for the 10 GeV vector and scalar benchmarks.
 - Model selection: for every replica, the selected profile and TMVA seed were read from `selected_model_metrics.csv`; the matching `logs/tmva_<profile>.log` was then used.

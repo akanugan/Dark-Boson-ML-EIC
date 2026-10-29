@@ -1,5 +1,7 @@
 # Procedure used to create the vector–scalar comparison plot
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 ## Purpose
 
 The plot compares the cross sections published in Figure 2 of *Electron-Ion

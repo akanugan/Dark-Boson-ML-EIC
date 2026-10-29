@@ -1,5 +1,7 @@
 # Final fair test of ML versus optimized cuts
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 **Date:** 14 August 2026  
 **Status:** frozen numerical result; conditional parton-level interpretation
 

@@ -1,6 +1,8 @@
-# Independent-run results underlying Figure 8
+# Historical independent-run results (original Figure 8)
 
-Exact numerical values for the combined independent-run figure in the revised manuscript. These replace the separate supplementary tables. Both methods use the same inputs and the published photon-background normalization. Each benchmark uses ten independent event generation and training runs.
+These values belong only to the earlier BDT-versus-cuts study and its original Figure 8. They are retained for provenance; use [`revision/stratified_repair/`](../../revision/stratified_repair/) for the current three-method results. The current Figure 8 shows [signal–photon efficiency curves](../../figures/08_roc/).
+
+In this original-study table, both methods use the same inputs and the published photon-background normalization. Each benchmark uses ten independent event generation and training runs.
 
 CSV coupling advantages are fractions (multiply by 100 for percent). Intervals combine resampling of independent runs and events. Adjusted lower bounds use the four electron-only tests or the two electron-plus-t tests, respectively. This table does not describe the separate alternative photon-normalization comparison.
 

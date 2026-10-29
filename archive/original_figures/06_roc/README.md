@@ -1,12 +1,14 @@
 # Figure 6: roc
 
+> **OLD STUDY ONLY.** This is the original submission's figure and numbering, superseded by the [current figure guide](../../../figures/README.md). Commands below refer to this archived copy.
+
 The `figure` image/PDF is the manuscript figure; `data/` contains its numerical inputs. Existing simulation pipelines remain in their original locations.
 
 The `plot.cpp` entry point generates only this figure. Compile from the repository root:
 
 ```sh
-c++ -std=c++17 $(root-config --cflags) figures/06_roc/plot.cpp -o /tmp/plot_fig6 $(root-config --libs) -lTMVA
-/tmp/plot_fig6 "$PWD" "$PWD/figures/06_roc"
+c++ -std=c++17 $(root-config --cflags) archive/original_figures/06_roc/plot.cpp -o /tmp/plot_fig6 $(root-config --libs) -lTMVA
+/tmp/plot_fig6 "$PWD" "$PWD/archive/original_figures/06_roc"
 ```
 
 Restore the ROOT events and models from the [data-v1 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/data-v1) into the repository layout first. The CSV files allow inspection without downloading these larger files.

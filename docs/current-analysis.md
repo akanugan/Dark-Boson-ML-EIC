@@ -27,7 +27,7 @@ The selected calibration rates are approximately 26–28% above the reference be
 
 ## Results and response scenarios
 
-At 10 GeV, adding `t` gives approximately 31–39% more simulated significance across the three methods. BDT and likelihood add approximately 3% over rectangular cuts with the same inputs and perform similarly. The purpose of the comparison is to distinguish the contribution of the observable from the smaller contribution of the selection method.
+At 10 GeV, adding `t` gives approximately 31–39% more simulated significance across the three methods. When all methods include `t`, BDT and likelihood add approximately 3% over rectangular cuts and perform similarly. The purpose of the comparison is to distinguish the contribution of the observable from the smaller contribution of the selection method.
 
 At this mass, all three methods retain a positive benefit from `t` under the tested 10% and 20% Gaussian relative smearing. The [EIC Yellow Report](https://arxiv.org/abs/2103.05419) motivates the resolution scale through visible-final-state studies; the benchmarks are not a calibrated response for this invisible process. Photon-loss scenarios use central miss probabilities `1e-8`, `1e-7`, `1e-6`, and `1e-5`, keeping nominal fitted selections fixed. Shape changes at fixed total rate, rate-only changes, and combined changes are reported separately.
 
@@ -37,4 +37,4 @@ The reference DIS rate is retained without further rejection. Different event-le
 
 The paired analysis uses 2000 event resamples per run and one million combined run/event draws for the nominal comparisons. The 198 contrasts comprise 66 direct `t` comparisons and 132 pairwise method comparisons. `ci95_*` columns describe pointwise intervals; `family95_*` columns include the combined Bonferroni adjustment. Scenario results use descriptive pointwise intervals outside that family.
 
-The intervals condition on the independent photon calibration and the stated physical model. They omit calibration and detector/model systematics. See the [data guide](../DATA_DOWNLOAD.md) before using the historical `data-v1` release: it does not contain the later corrected events and models. The committed compact tables support inspection and plotting; complete event-level reruns require the corresponding current artifacts or their generation workflow.
+The intervals condition on the independent photon calibration and the stated physical model. They omit calibration and detector/model systematics. The [revision-data-v2 release](https://github.com/iRojae/Dark-Boson-ML-EIC/releases/tag/revision-data-v2) supports statistical replay from saved arrays and supplies the selected models. It excludes raw event files. The historical `data-v1` release belongs to the original study; its inclusive photon file is still used by the unchanged Figure 3. See the [data guide](../DATA_DOWNLOAD.md) for the distinction between plotting, statistical replay, and event-level reruns.

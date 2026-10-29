@@ -1,5 +1,7 @@
 # Background-generation status
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 ## What the paper specifies
 
 The corrected paper identifies:

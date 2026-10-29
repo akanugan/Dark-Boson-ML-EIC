@@ -1,5 +1,7 @@
 # Controlled discrepancy tests
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 ## Rules
 
 Each test below changes at most one convention or estimator. Unless stated,

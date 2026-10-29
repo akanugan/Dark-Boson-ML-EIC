@@ -1,5 +1,7 @@
 # Frozen baseline manifest
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 Baseline directory: `/Users/rojaemighty/Dark` (clean source directory at freeze time;
 it is not a Git repository, so the file hashes below are the immutable identifiers).
 

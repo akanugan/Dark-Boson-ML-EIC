@@ -1,5 +1,7 @@
 # Directory merge — September 9, 2026
 
+> **OLD STUDY ONLY.** This document records the original analysis. Its settings, results, and figure numbers are historical. Use the [current analysis guide](current-analysis.md) and [documentation index](README.md) for the corrected three-method study.
+
 Merged `/Users/rojaemighty/Dark/next_stage` into `/Users/rojaemighty/Dark`. Removed the now-empty next_stage directory.
 All 5,956 retained files matched their planned SHA-256 immediately after moving.
 

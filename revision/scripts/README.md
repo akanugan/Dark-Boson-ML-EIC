@@ -1,19 +1,67 @@
 # Revised scientific code
 
 These scripts retain the numerical methods used for the corrected comparison.
-They are separate from the manuscript. The current results are in
-`revision/stratified_repair`; the older `revision/results`, photon-loss pilot,
-wide-interval follow-up and `stratified_refit` paths in historical scripts refer
-to earlier studies, not an alternative current result.
+They are separate from the manuscript. Current results are in
+`revision/stratified_repair`. The preceding `stratified_refit` scan is retained
+for correction provenance; its shared pipeline helpers are still required.
 
-The active aggregate/statistics entry points are `analyze_stratified_refit.py`,
-`compare_selections.py`, and `plot_stratified_refit.py`. In particular,
-`evaluate_photon_loss.py`, `run_t_smearing*.py`, `run_comparison.py`, and
-`regenerate_current_diagnostics.py` retain the earlier pilot workflows; their
-names do not make their outputs current. The revised response scenarios are
-calculated by `analyze_stratified_refit.py`. Current photon calibration rates
-are recorded in the released point configurations and result tables, rather
-than the earlier baseline rates in `revision/config/rates.csv`.
+## Current entry points and dependencies
+
+| Current aggregate entry point | Purpose |
+|---|---|
+| `analyze_stratified_refit.py` | Paired uncertainty analysis and photon-loss scenarios; can reaggregate saved arrays without reading events. |
+| `compare_selections.py` | Reconstructs the six-selection comparison and checks it against the 198 nominal contrasts. |
+| `plot_stratified_refit.py` | Plots the current aggregate summaries. |
+
+The following are current full-workflow modules, not earlier-study-only code:
+
+- `prepare_stratified_data.py`: generation of the separate photon regions for the preceding full scan.
+- `run_stratified_refit.py`: fitting, validation selection, and shared utilities.
+- `continue_stratified_study.py`: final evaluation and the current 10%/20% smearing workflow, using `export_refit_scores`. The similarly named `run_t_smearing*.py` files below are earlier pilots.
+
+The current repair workflow under `revision/stratified_repair/` also retains
+`generate_photon_repairs.py` and its `scripts/setup_view.py`, `repair.py`,
+`validation_reselect.py`, `check_reuse.py`, `audit_fitting_settings.py`,
+`reproduce_validation.py`, and `report_changes.py`. These generate replacements,
+repeat the affected selections, or audit the correction. They require the
+preceding full study and additional raw events, candidate models, or execution
+records; the compact array release is not sufficient to rerun that workflow.
+
+Keep the shared modules together: the repair imports `run_stratified_refit`
+and `continue_stratified_study`; those depend on `prepare_stratified_data` and
+`analyze_stratified_refit`. `compare_selections` also uses
+`plot_stratified_refit`.
+
+Current photon calibration rates are recorded in the released point
+configurations and result tables, rather than the earlier baseline photon
+rates in `revision/config/rates.csv`.
+
+## Earlier revision only
+
+These 20 scripts belong to earlier stages of the revision, including pilots
+and follow-up checks. They are distinct from the original 2026 submission
+study and are not entry points for the current corrected results. Their
+earlier outputs must not be substituted for `revision/stratified_repair`.
+
+| Earlier revision workflow | Scripts |
+|---|---|
+| Initial three-method scan and statistics | `run_comparison.py`, `summarize.py`, `test_statistics.py`, `plot_results.py`, `plot_manuscript_scan.py` |
+| Targeted wide-interval follow-up | `rerun_wide_intervals.py`, `plot_followup.py` |
+| Photon-generation and photon-loss pilots | `pilot_photon_lab.py`, `pilot_photon_regions.py`, `run_photon_loss_generation.py`, `export_photon_loss_scores.py`, `evaluate_photon_loss.py`, `plot_photon_loss.py`, `report_photon_loss.py` |
+| Ancillary-distribution reweighting tests | `run_photon_shapes.py`, `plot_photon_shapes.py` |
+| Earlier smearing pilots | `run_t_smearing.py`, `run_t_smearing_20pct.py` |
+| Earlier diagnostics and original-versus-refit comparison | `regenerate_current_diagnostics.py`, `compare_original_t.py` |
+
+None of these scripts is imported by the current pipeline. Retain their
+internal dependencies if moving them: `plot_followup.py`,
+`plot_manuscript_scan.py`, `plot_results.py`, `rerun_wide_intervals.py`, and
+`summarize.py` import `run_comparison`; `test_statistics.py` imports
+`summarize`. In particular, `evaluate_photon_loss.py` uses the earlier fixed
+photon rate, while the current scenarios are calculated by
+`analyze_stratified_refit.py`.
+
+`resume_after_space_guard.py` is an operational restart utility retained for
+history. It is not a scientific result or reproduction entry point.
 
 Install Python requirements from the repository root:
 
@@ -37,7 +85,7 @@ current publication layouts and their small numerical inputs.
 ## Reaggregate released analysis arrays
 
 After restoring the compact revision-data-v2 analysis archive, the following
-commands recompute aggregate intervals and the six-method comparison from saved
+commands recompute aggregate intervals and the six-selection comparison from saved
 paired run/event arrays. They do not generate events, train models, choose
 selections or require ROOT:
 
